@@ -1,0 +1,93 @@
+﻿<Window x:Class="AuroraStarLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
+        xmlns:local="clr-namespace:AuroraStarLauncher"
+        ui:ThemeManager.IsThemeAware="True"
+        ui:TitleBar.ExtendViewIntoTitleBar="False"    
+        ui:WindowHelper.SystemBackdropType="Acrylic"
+        ui:TitleBar.IsBackButtonVisible="False"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        ui:TitleBar.Height="45"
+        WindowStartupLocation="CenterScreen" 
+        UseLayoutRounding="True"
+        Background="Transparent"
+        SourceInitialized="Window_SourceInitialized"
+        mc:Ignorable="d"
+        ui:TitleBar.IsIconVisible="True"
+        Title="Aurora Star Launcher" 
+        Height="500" 
+        Width="850">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Style_ContentBorder" TargetType="Border">
+                <Setter Property="BorderBrush" Value="#0F000000"/>
+                <Setter Property="Background" Value="#33FFFFFF"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="CornerRadius" Value="8"/>
+            </Style>
+            <Style x:Key="Style_ToolboxButton" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0,1,0,0" CornerRadius="0"
+                      UseAeroCaptionButtons="False" CaptionHeight="36"/>
+    </WindowChrome.WindowChrome>
+        <Grid>
+        <ui:NavigationView x:Name="NavView" 
+                           IsPaneOpen="False" 
+                           ItemInvoked="NavigationView_ItemInvoked">
+            <ui:NavigationView.MenuItems>
+                <ui:NavigationViewItem Content="启动" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.HomePage" IsSelected="True">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.PowerButton}" FontSize="16"/>
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="下载" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.DownloadPage">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Download}" FontSize="16"/>
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="联机" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.LinksPage">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Link}" FontSize="16"/>
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="新闻" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.NewsPage">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.NewWindow}" FontSize="16"/>
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+            </ui:NavigationView.MenuItems>
+            <ui:NavigationView.FooterMenuItems>
+                <ui:NavigationViewItem Content="帮助" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.HelpsPage">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Help}" FontSize="16"/>
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="设置" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.SettingsPage">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Settings}" FontSize="16"/>
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="关于" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.AboutPage">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Info}" FontSize="16"/>
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+            </ui:NavigationView.FooterMenuItems>
+            <ui:Frame x:Name="frame"/>
+        </ui:NavigationView>
+    </Grid>
+</Window>
