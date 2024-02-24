@@ -3,12 +3,15 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
       xmlns:local="clr-namespace:AuroraStarLauncher.Pages.LoginPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="380" d:DesignWidth="300"
       Title="OffineLoginPage">
 
     <Grid>
-        
+        <Image x:Name="User_Image" Height="150" Width="150" VerticalAlignment="Top" Margin="0,20,0,0"/>
+        <TextBox Width="225" x:Name="User_Name" Text="" FontSize="22" VerticalAlignment="Top" Margin="0,200,0,0"/>
+        <Button x:Name="Start" Content="🎮 启动游戏" FontSize="20" Background="BlueViolet" Height="80" Width="220" VerticalAlignment="Top" Margin="0,300,0,0" Click="Start_Click" HorizontalAlignment="Stretch"/>
     </Grid>
 </Page>

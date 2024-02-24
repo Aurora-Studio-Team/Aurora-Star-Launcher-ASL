@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:local="clr-namespace:AuroraStarLauncher"
         ui:ThemeManager.IsThemeAware="True"
         ui:TitleBar.ExtendViewIntoTitleBar="False"    
@@ -38,6 +39,9 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Right">
+            <StackPanel hc:Growl.Token="SuccessMsg" VerticalAlignment="Top" Margin="0,10,10,10"/>
+        </ScrollViewer>
         <!-- 导航 -->
         <ui:NavigationView x:Name="NavView" 
                            IsPaneOpen="False" 
