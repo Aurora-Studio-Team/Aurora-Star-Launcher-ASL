@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using iNKORE.UI.WPF.Modern.Media.Animation;
 
 namespace AuroraStarLauncher.Pages
 {
@@ -23,6 +24,18 @@ namespace AuroraStarLauncher.Pages
         public LinksPage()
         {
             InitializeComponent();
+        }
+
+        private void pm_Login_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                
+            }
+            catch
+            {
+                MessageBox.Show("无法连接至星光网络服务器，可能是网络原因，如多次无法登录/注册，则可能已被DDOS。", "提示");
+            }
         }
     }
 }

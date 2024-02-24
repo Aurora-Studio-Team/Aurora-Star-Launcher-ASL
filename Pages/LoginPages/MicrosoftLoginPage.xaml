@@ -13,6 +13,6 @@
         <Image x:Name="User_Image" Height="150" Width="150" VerticalAlignment="Top" Margin="0,20,0,0"/>
         <TextBlock x:Name="User_Name" Text="请登录" FontSize="22" VerticalAlignment="Top" Margin="0,200,0,0" HorizontalAlignment="Center"/>
         <Button Background="Transparent" x:Name="Login" Content="登录到你的Microsoft账户" FontSize="15" Height="40" Width="220" VerticalAlignment="Top" Margin="0,250,0,0" Click="Login_Click"/>
-        <Button x:Name="Start" Content="🎮 启动游戏" FontSize="20" Background="BlueViolet" Height="80" Width="220" VerticalAlignment="Top" Margin="0,300,0,0"/>
+        <Button x:Name="Start" Content="🎮 启动游戏" FontSize="20" Background="BlueViolet" Height="80" Width="220" VerticalAlignment="Top" Margin="0,300,0,0" Click="Start_Click"/>
     </Grid>
 </Page>

@@ -9,6 +9,6 @@
       Title="NewsPage">
 
     <Grid>
-        <TextBlock Text="This is the NEWSPAGE"/>
+        <WebBrowser x:Name="newsWeb"/>
     </Grid>
 </Page>

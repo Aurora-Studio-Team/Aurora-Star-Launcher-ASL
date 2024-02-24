@@ -25,11 +25,8 @@ namespace AuroraStarLauncher
             InitializeComponent();
             frame.Content = new HomePage();
         }
-        private void Window_SourceInitialized(object sender, EventArgs e)
-        {
-            AcrylicHelper.Apply(this, true);
-        }
-        private void NavigationView_ItemInvoked(iNKORE.UI.WPF.Modern.Controls.NavigationView sender, iNKORE.UI.WPF.Modern.Controls.NavigationViewItemInvokedEventArgs args)
+
+        private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
             if (args.IsSettingsInvoked == true)
             {

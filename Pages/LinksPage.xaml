@@ -3,12 +3,58 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
+      xmlns:hc="https://handyorg.github.io/handycontrol"
       xmlns:local="clr-namespace:AuroraStarLauncher.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LinksPage">
 
     <Grid>
-        <TextBlock Text="This is the LINKSPAGE"/>
+        <TabControl Background="Transparent">
+            <TabItem Header="账户">
+                <Grid>
+                    <TabControl Background="Transparent">
+                        <TabItem Header="用户信息">
+                            <Grid>
+                                <TextBlock Text="仪表盘" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,10,0,0" FontSize="25"/>
+                                <Label Height="40" Width="40" HorizontalAlignment="Left" Margin="15,55,160,0" VerticalAlignment="Top">
+                                    <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.GuestUser}" FontSize="20"/>
+                                </Label>
+                                <Label Height="40" Width="150" Content="请登录" x:Name="pn_User_Name" FontSize="18" HorizontalAlignment="Left" Margin="55,55,10,0" VerticalAlignment="Top"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="登录">
+                            <Grid>
+                                <TextBlock Text="登录（星光网络）" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,10,0,0" FontSize="25"/>
+                                <Label Content="用户名：" Height="35" VerticalAlignment="Top" Margin="20,55,0,0" HorizontalAlignment="Left"/>
+                                <Label Content="密码：" Height="35" VerticalAlignment="Top" Margin="32,100,0,0" HorizontalAlignment="Left"/>
+                                <TextBox Height="35" Width="680" Margin="100,55,0,0" x:Name="pn_Login_User_Name" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                                <TextBox Height="35" Width="680" Margin="100,100,0,0" x:Name="pn_Login_User_Password" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="注册">
+                            <Grid>
+                                <TextBlock Text="注册（星光网络）" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,10,0,0" FontSize="25"/>
+                                <Label Content="用户名：" Height="35" VerticalAlignment="Top" Margin="20,55,0,0" HorizontalAlignment="Left"/>
+                                <Label Content="密码：" Height="35" VerticalAlignment="Top" Margin="32,100,0,0" HorizontalAlignment="Left"/>
+                                <TextBox Height="35" Width="680" Margin="100,55,0,0" x:Name="pn_Reg_User_Name" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                                <TextBox Height="35" Width="680" Margin="100,100,0,0" x:Name="pn_Reg_User_Password" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="联机">
+                <Grid>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="关于此服务">
+                <Grid>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Page>

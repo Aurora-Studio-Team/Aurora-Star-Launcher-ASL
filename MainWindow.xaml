@@ -7,14 +7,11 @@
         xmlns:local="clr-namespace:AuroraStarLauncher"
         ui:ThemeManager.IsThemeAware="True"
         ui:TitleBar.ExtendViewIntoTitleBar="False"    
-        ui:WindowHelper.SystemBackdropType="Acrylic"
+        ui:WindowHelper.SystemBackdropType="Mica"
         ui:TitleBar.IsBackButtonVisible="False"
         ui:WindowHelper.UseModernWindowStyle="True"
-        ui:TitleBar.Height="45"
         WindowStartupLocation="CenterScreen" 
         UseLayoutRounding="True"
-        Background="Transparent"
-        SourceInitialized="Window_SourceInitialized"
         mc:Ignorable="d"
         ui:TitleBar.IsIconVisible="True"
         Title="Aurora Star Launcher" 
@@ -40,11 +37,8 @@
             </Style>
         </ResourceDictionary>
     </Window.Resources>
-    <WindowChrome.WindowChrome>
-        <WindowChrome GlassFrameThickness="0,1,0,0" CornerRadius="0"
-                      UseAeroCaptionButtons="False" CaptionHeight="36"/>
-    </WindowChrome.WindowChrome>
-        <Grid>
+    <Grid>
+        <!-- 导航 -->
         <ui:NavigationView x:Name="NavView" 
                            IsPaneOpen="False" 
                            ItemInvoked="NavigationView_ItemInvoked">
