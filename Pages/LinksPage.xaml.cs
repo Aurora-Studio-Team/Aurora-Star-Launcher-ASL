@@ -62,6 +62,7 @@ namespace AuroraStarLauncher.Pages
             {
                 MessageBox.Show("登陆失败", "提示");
             }
+
             MessageBox.Show("登陆", "提示");
         }
     }
