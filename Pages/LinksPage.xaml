@@ -31,7 +31,7 @@
                                 <Label Content="密码：" Height="35" VerticalAlignment="Top" Margin="32,100,0,0" HorizontalAlignment="Left"/>
                                 <TextBox Height="35" Width="680" Margin="100,55,0,0" x:Name="pn_Login_User_Name" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                                 <TextBox Height="35" Width="680" Margin="100,100,0,0" x:Name="pn_Login_User_Password" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <Button Height="40" Width="180" Content="登录" FontSize="20" Margin="8,200,0,0" Background="BlueViolet" x:Name="pn_Login_ALL" VerticalAlignment="Top" HorizontalAlignment="Left" Click="pn_Login_ALL_Click"/>
+                                <Button Height="40" Width="180" Content="登录" FontSize="20" Margin="8,200,0,0" Background="BlueViolet" x:Name="pn_Login_ALL" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Pn_Login_ALL_Click"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="注册">
