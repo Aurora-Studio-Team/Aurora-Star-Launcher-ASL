@@ -11,43 +11,31 @@
       Title="LinksPage">
 
     <Grid>
-   
-        <TabControl Background="Transparent">
+        <TabControl Background="Transparent" ui:TabControlHelper.IsAddTabButtonVisible="False">
             <TabItem Header="账户">
                 <Grid>
-                    <TabControl Background="Transparent">
-                        <TabItem Header="用户信息">
-                            <Grid>
-                                <TextBlock Text="仪表盘" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,10,0,0" FontSize="25"/>
-                                <Label Height="40" Width="40" HorizontalAlignment="Left" Margin="15,55,160,0" VerticalAlignment="Top">
-                                    <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.GuestUser}" FontSize="20"/>
-                                </Label>
-                                <Label Height="40" Width="150" Content="请登录" x:Name="pn_User_Name" FontSize="18" HorizontalAlignment="Left" Margin="55,55,10,0" VerticalAlignment="Top"/>
-                            </Grid>
-                        </TabItem>
-                        <TabItem Header="登录">
-                            <Grid>
-                                <TextBlock Text="登录（星光网络）" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,10,0,0" FontSize="25"/>
-                                <Label Content="用户名：" Height="35" VerticalAlignment="Top" Margin="20,55,0,0" HorizontalAlignment="Left"/>
-                                <Label Content="密码：" Height="35" VerticalAlignment="Top" Margin="32,100,0,0" HorizontalAlignment="Left"/>
-                                <TextBox Height="35" Width="680" Margin="100,55,0,0" x:Name="pn_Login_User_Name" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <TextBox Height="35" Width="680" Margin="100,100,0,0" x:Name="pn_Login_User_Password" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <Button Height="40" Width="180" Content="登录" FontSize="20" Margin="8,200,0,0" Background="BlueViolet" x:Name="pn_Login_ALL" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Pn_Login_ALL_Click"/>
-                            </Grid>
-                        </TabItem>
-                        <TabItem Header="注册">
-                            <Grid>
-                                <TextBlock Text="注册（星光网络）" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,10,0,0" FontSize="25"/>
-                                <Label Content="用户名：" Height="35" VerticalAlignment="Top" Margin="20,55,0,0" HorizontalAlignment="Left"/>
-                                <Label Content="密码：" Height="35" VerticalAlignment="Top" Margin="32,100,0,0" HorizontalAlignment="Left"/>
-                                <Label Content="电子邮箱：" Height="35" VerticalAlignment="Top" Margin="8,145,0,0" HorizontalAlignment="Left"/>
-                                <TextBox Height="35" Width="680" Margin="100,55,0,0" x:Name="pn_Reg_User_Name" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <TextBox Height="35" Width="680" Margin="100,100,0,0" x:Name="pn_Reg_User_Password" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <TextBox Height="35" Width="680" Margin="100,145,0,0" x:Name="pn_Reg_User_Email" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <Button Height="40" Width="180" Content="注册" FontSize="20" Margin="8,200,0,0" Background="BlueViolet" x:Name="pn_Reg_ALL" VerticalAlignment="Top" HorizontalAlignment="Left" Click="pn_Reg_ALL_Click"/>
-                            </Grid>
-                        </TabItem>
-                    </TabControl>
+                    <TextBlock Text="仪表盘" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,10,0,0" FontSize="25"/>
+                    <Border Style="{StaticResource Style_ContentBorder}" Height="150" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,50,0,0">
+                        <Grid>
+                            <Label Height="25" Width="40" HorizontalAlignment="Left" Margin="10,10,160,0" VerticalAlignment="Top">
+                                <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.GuestUser}" FontSize="20"/>
+                            </Label>
+                            <TextBlock Height="25" Width="150" Text="请登录" x:Name="PN_User_Name" FontSize="18" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top"/>
+                            <TextBlock Height="20" Width="200" Text="用户ID：— — — —" x:Name="PN_User_ID" FontSize="14" HorizontalAlignment="Left" Margin="10,35,10,0" VerticalAlignment="Top"/>
+                            <TextBlock Height="20" Width="200" Text="登陆时间：— — — —" x:Name="PN_Logintime" FontSize="14" HorizontalAlignment="Left" Margin="10,55,10,0" VerticalAlignment="Top"/>
+                        </Grid>
+                    </Border>
+                    <Border Style="{StaticResource Style_ContentBorder}" Height="400" Width="370" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="415,10,10,10">
+                        <Grid>
+                            <TextBlock Text="登录" Margin="10,5,0,0" VerticalAlignment="Top" FontSize="25" HorizontalAlignment="Center"/>
+                            <Label Content="用户名：" Height="20" VerticalAlignment="Top" Margin="20,58,0,0" HorizontalAlignment="Left" RenderTransformOrigin="0.446,0.514"/>
+                            <Label Content="密码：" Height="20" VerticalAlignment="Top" Margin="20,98,0,0" HorizontalAlignment="Left"/>
+                            <TextBox Height="35" Width="270" x:Name="pn_Login_User_Name" Margin="80,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <PasswordBox Height="35" Width="270" x:Name="pn_Login_User_Password" Margin="80,90,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <Button Height="40" Width="100" Content="登录" FontSize="20" Background="BlueViolet" x:Name="pn_Login_ALL" VerticalAlignment="Top" Click="Pn_Login_ALL_Click" Margin="0,150,20,0" HorizontalAlignment="Right"/>
+                            <Button Height="40" Width="100" Content="注册" FontSize="20" x:Name="pn_Reg" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,150,0,0"/>
+                        </Grid>
+                    </Border>
                 </Grid>
             </TabItem>
             <TabItem Header="联机">
@@ -57,7 +45,9 @@
             </TabItem>
             <TabItem Header="关于此服务">
                 <Grid>
-
+                    <Border Style="{StaticResource Style_ContentBorder}" Height="200" VerticalAlignment="Top" Margin="15,15,15,0">
+                        <TextBlock Text="关于此服务" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,5,0,0"/>
+                    </Border>
                 </Grid>
             </TabItem>
         </TabControl>

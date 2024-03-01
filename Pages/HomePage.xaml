@@ -1,4 +1,4 @@
-﻿<Page x:Clas  s="AuroraStarLauncher.Pages.HomePage"
+﻿<Page x:Class="AuroraStarLauncher.Pages.HomePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -10,15 +10,15 @@
       d:DesignHeight="440" d:DesignWidth="790"
       Title="HomePage">
     <Grid>
-        <TabControl Height="425" Background="Transparent" Width="300" Style="{StaticResource TabControlCapsule}" HorizontalAlignment="Right" Margin="0,10,15,0" VerticalAlignment="Top">
+        <TabControl Height="425" Background="Transparent" Width="400" ui:TabControlHelper.IsAddTabButtonVisible="False" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top">
             <TabItem Background="Transparent" Header="微软登录">
                 <ui:Frame x:Name="MS" VerticalAlignment="Top"/>
             </TabItem>
             <TabItem Background="Transparent" Header="离线登录">
-
+                <ui:Frame x:Name="ON" VerticalAlignment="Top"/>
             </TabItem>
             <TabItem Background="Transparent" Header="第三方登录">
-
+                <ui:Frame x:Name="LT" VerticalAlignment="Top"/>
             </TabItem>
         </TabControl>
     </Grid>

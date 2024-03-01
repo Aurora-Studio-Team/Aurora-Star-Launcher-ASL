@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using StarLight_Core.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,11 @@ namespace AuroraStarLauncher.Pages
         public DownloadPage()
         {
             InitializeComponent();
+        }
+
+        private async void Minecraft_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           
         }
     }
 }

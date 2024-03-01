@@ -1,17 +1,10 @@
 ﻿using iNKORE.UI.WPF.Modern.Controls;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using AuroraStarLauncher.Pages;
 using iNKORE.UI.WPF.Modern.Media.Animation;
-using iNKORE.UI.WPF.Modern.Helpers.Styles;
+using iNKORE.UI.WPF.Modern;
+using System.IO;
+using System.Reflection;
 
 namespace AuroraStarLauncher
 {
@@ -23,9 +16,50 @@ namespace AuroraStarLauncher
         public MainWindow()
         {
             InitializeComponent();
-            frame.Content = new HomePage();
-        }
 
+            //默认主题
+            ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
+
+            //默认页面
+            frame.Content = new HomePage();
+            try
+            {
+                //生成ASL文件夹
+                string applicationDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string FolderName = "ASL";
+                string FolderPath = Path.Combine(applicationDirectory, FolderName);
+                if (!Directory.Exists(FolderPath))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(FolderPath);
+                    }
+                    catch
+                    {
+                    }
+                }
+
+                //生成Config.json文件
+                string FileName = "config.json";
+                string FilePath = Path.Combine(FolderPath, FileName);
+                if (!File.Exists(FilePath))
+                {
+                    try
+                    {
+                        using (File.Create(FilePath)) ;
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+
+        }
+        //导航栏
         private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
             if (args.IsSettingsInvoked == true)
@@ -37,6 +71,7 @@ namespace AuroraStarLauncher
                 NavigationView_Navigate(Type.GetType(args.InvokedItemContainer.Tag.ToString()), args.RecommendedNavigationTransitionInfo);
             }
         }
+
         private void NavigationView_Navigate(Type navPageType, NavigationTransitionInfo transitionInfo)
         {
             Type preNavPageType = frame.Content.GetType();
@@ -53,10 +88,6 @@ namespace AuroraStarLauncher
                 if (navPageType == typeof(LinksPage))
                 {
                     frame.Content = new LinksPage();
-                }
-                if (navPageType == typeof(NewsPage))
-                {
-                    frame.Content = new NewsPage();
                 }
                 if (navPageType == typeof(HelpsPage))
                 {

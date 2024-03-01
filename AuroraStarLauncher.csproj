@@ -18,7 +18,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="HandyControl" Version="3.4.0" />
     <PackageReference Include="iNKORE.UI.WPF.Modern" Version="0.9.25.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="StarLight_Core" Version="1.3.2-Preview7" />
