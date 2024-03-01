@@ -14,7 +14,7 @@
         <Border Style="{StaticResource Style_ContentBorder}" Margin="15,65,15,15">
             <Grid>
                 <Expander Header="Minecraft" Margin="15,15,15,15" VerticalAlignment="Top">
-                    <ListBox x:Name="Minecraft_List" SelectionChanged="Minecraft_List_SelectionChanged">
+                    <ListBox x:Name="Minecraft_List">
                         
                     </ListBox>
                 </Expander>
