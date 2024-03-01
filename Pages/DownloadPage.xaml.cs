@@ -1,19 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Windows.Controls;
 using StarLight_Core.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AuroraStarLauncher.Pages
 {
@@ -25,11 +11,8 @@ namespace AuroraStarLauncher.Pages
         public DownloadPage()
         {
             InitializeComponent();
+            //var gameCores = await InstallUtil.GetGameCoresAsync();
         }
 
-        private async void Minecraft_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-           
-        }
     }
 }

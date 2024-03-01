@@ -51,5 +51,6 @@
                 </Grid>
             </TabItem>
         </TabControl>
+        <ui:InfoBar x:Name="Footer_Tip" IsOpen="False" Margin="15,0,15,15" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>
