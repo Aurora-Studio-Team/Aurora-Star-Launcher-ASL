@@ -18,7 +18,7 @@ namespace AuroraStarLauncher
             InitializeComponent();
 
             //默认主题
-            ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
+            ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light;
 
             //默认页面
             frame.Content = new HomePage();

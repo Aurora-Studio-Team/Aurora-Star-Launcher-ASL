@@ -1,9 +1,5 @@
-﻿using System;
-using System.Windows.Controls;
-using iNKORE.UI.WPF.Modern.Controls;
-using StarLight_Core.Enum;
+﻿using iNKORE.UI.WPF.Modern.Controls;
 using StarLight_Core.Installer;
-using StarLight_Core.Models.Installer;
 using StarLight_Core.Utilities;
 using Page = System.Windows.Controls.Page;
 
@@ -50,9 +46,10 @@ namespace AuroraStarLauncher.Pages
             try
             {
                 var id = Minecraft_List.SelectedItem.ToString();
+                MessageBox.Show(id);
                 MinecraftInstaller installer = new MinecraftInstaller(id);
                 await installer.InstallAsync(id, true);
-            
+                
                 Footer_Tip.Severity = InfoBarSeverity.Success;
                 Footer_Tip.Title = "版本安装成功！";
                 Footer_Tip.IsOpen = true;

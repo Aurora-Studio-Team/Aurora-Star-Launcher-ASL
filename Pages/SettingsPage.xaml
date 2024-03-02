@@ -10,6 +10,5 @@
 
     <Grid>
         <TextBlock Text="设置" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,15,0,0"/>
-        
     </Grid>
 </Page>
