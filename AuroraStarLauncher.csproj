@@ -19,6 +19,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="iNKORE.UI.WPF.Modern" Version="0.9.26.3" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="StarLight_Core" Version="1.3.3-Preview6" />
   </ItemGroup>
