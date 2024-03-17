@@ -9,49 +9,51 @@
       mc:Ignorable="d" 
       d:DesignHeight="700"  d:DesignWidth="800"
       Title="AboutPage">
-    <Grid>
-        <TextBlock Text="关于" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,15,0,0"/>
-        <Border Style="{StaticResource Style_ContentBorder}" Height="210" VerticalAlignment="Top" Margin="10,60,10,0">
-            <Grid>
-                <TextBlock Text="法律信息" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="15,40,0,0" VerticalAlignment="Top">
-                    <iconPacks:PackIconSimpleIcons Kind="MojangStudios" Height="50" Width="90"/>
-                    <iconPacks:PackIconSimpleIcons Kind="Minecraft" Height="50" Width="160"/>
-                    <iconPacks:PackIconMaterial Kind="Minecraft" Height="50" Width="80"/>
-                    <iconPacks:PackIconFontAwesome Kind="GithubBrands"  Height="50" Width="60"/>
-                </StackPanel>
-                <TextBlock Text=" 此软件与 MOJANG STUDIO 没有任何从属关系，第三方开发者制作。&#13; Minecraft 游戏本体及相关图标归 MOJANG STUDIO 所有。 &#13; 本软件以GPL3.0许可证在 GitHub 免费开源，任何人不得以任何形式擅自非法使用、获取、分发此软件任何版本的副本！ &#13; 使用此软件即表示您同意《用户隐私与免责条款》。 &#13; Copyright ©️ Aurora Studio、THZ同学." VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,100,0,0"/>
-            </Grid>
-        </Border>
-        <Border Style="{StaticResource Style_ContentBorder}" VerticalAlignment="Top" Height="400" Margin="10,280,10,10">
-            <StackPanel>
-                <TextBlock Text="许可与版权声明" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0"/>
-                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0">
-                    <TextBlock Text="Newtonsoft.Json" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <TextBlock Text="Copyright ©️ James Newton-King." FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <Button Content="官方网站" Margin="15,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0">
-                    <TextBlock Text="Costura.Fody" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <TextBlock Text="Copyright ©️ geertvanhorrik,simoncropp." FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <Button Content="官方网站" Margin="15,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0">
-                    <TextBlock Text="iNKORE.UI.WPF.Modern" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <TextBlock Text="Copyright ©️ Yoojun Zhou (NotYoojun.!)." FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <Button Content="官方网站" Margin="15,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0">
-                    <TextBlock Text="MahApps.Metro.IconPacks" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <TextBlock Text="Copyright ©️ Jan Karger." FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <Button Content="官方网站" Margin="15,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0">
-                    <TextBlock Text="StarLight_Core" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <TextBlock Text="Copyright ©️ Ink Marks Studio." FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <Button Content="官方网站" Margin="15,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                </StackPanel>
-            </StackPanel>
-        </Border>
-    </Grid>
+      <ScrollViewer>
+          <Grid>
+              <TextBlock Text="关于" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,15,0,0"/>
+              <Border Style="{StaticResource Style_ContentBorder}" Height="210" VerticalAlignment="Top" Margin="10,60,10,0">
+                  <Grid>
+                      <TextBlock Text="法律信息" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0"/>
+                      <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="15,40,0,0" VerticalAlignment="Top">
+                          <iconPacks:PackIconSimpleIcons Kind="MojangStudios" Height="50" Width="90"/>
+                          <iconPacks:PackIconSimpleIcons Kind="Minecraft" Height="50" Width="160"/>
+                          <iconPacks:PackIconMaterial Kind="Minecraft" Height="50" Width="80"/>
+                          <iconPacks:PackIconFontAwesome Kind="GithubBrands"  Height="50" Width="60"/>
+                      </StackPanel>
+                      <TextBlock Text=" 此软件与 MOJANG STUDIO 没有任何从属关系，第三方开发者制作。&#13; Minecraft 游戏本体及相关图标归 MOJANG STUDIO 所有。 &#13; 本软件以GPL3.0许可证在 GitHub 免费开源，任何人不得以任何形式擅自非法使用、获取、分发此软件任何版本的副本！ &#13; 使用此软件即表示您同意《用户隐私与免责条款》。 &#13; Copyright ©️ Aurora Studio、THZ同学." VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,100,0,0"/>
+                  </Grid>
+              </Border>
+              <Border Style="{StaticResource Style_ContentBorder}" VerticalAlignment="Top" Height="400" Margin="10,280,10,10">
+                  <StackPanel>
+                      <TextBlock Text="许可与版权声明" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0"/>
+                      <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0">
+                          <TextBlock Text="Newtonsoft.Json" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                          <TextBlock Text="Copyright ©️ James Newton-King." FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                          <Button Content="官方网站" Margin="15,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                      </StackPanel>
+                      <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0">
+                          <TextBlock Text="Costura.Fody" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                          <TextBlock Text="Copyright ©️ geertvanhorrik,simoncropp." FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                          <Button Content="官方网站" Margin="15,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                      </StackPanel>
+                      <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0">
+                          <TextBlock Text="iNKORE.UI.WPF.Modern" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                          <TextBlock Text="Copyright ©️ Yoojun Zhou (NotYoojun.!)." FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                          <Button Content="官方网站" Margin="15,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                      </StackPanel>
+                      <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0">
+                          <TextBlock Text="MahApps.Metro.IconPacks" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                          <TextBlock Text="Copyright ©️ Jan Karger." FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                          <Button Content="官方网站" Margin="15,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                      </StackPanel>
+                      <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0">
+                          <TextBlock Text="StarLight_Core" FontSize="13" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                          <TextBlock Text="Copyright ©️ Ink Marks Studio." FontSize="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                          <Button Content="官方网站" Margin="15,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                      </StackPanel>
+                  </StackPanel>
+              </Border>
+          </Grid>
+      </ScrollViewer>
 </Page>
