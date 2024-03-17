@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
+        xmlns:iconPacks = "http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:local="clr-namespace:AuroraStarLauncher"
         ui:ThemeManager.IsThemeAware="True"
@@ -16,6 +17,7 @@
         mc:Ignorable="d"
         ui:TitleBar.IsIconVisible="True"
         Title="Aurora Star Launcher" 
+        ui:TitleBar.Height="35"
         Height="500" 
         Width="850">
     <Window.Resources>
@@ -42,11 +44,12 @@
         <!-- 导航 -->
         <ui:NavigationView x:Name="NavView" 
                            IsPaneOpen="False" 
+                           IsBackButtonVisible="Collapsed"
                            ItemInvoked="NavigationView_ItemInvoked">
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem Content="启动" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.HomePage" IsSelected="True">
                     <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.PowerButton}" FontSize="16"/>
+                        <iconPacks:PackIconMaterialLight Kind="Power" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="下载" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.DownloadPage">
@@ -56,14 +59,14 @@
                 </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="联机" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.LinksPage">
                     <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Link}" FontSize="16"/>
+                        <iconPacks:PackIconRadixIcons Kind="Link2" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
             </ui:NavigationView.MenuItems>
             <ui:NavigationView.FooterMenuItems>
                 <ui:NavigationViewItem Content="帮助" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.HelpsPage">
                     <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Help}" FontSize="16"/>
+                        <iconPacks:PackIconVaadinIcons Kind="QuestionCircleOutline" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="设置" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.SettingsPage">
@@ -77,7 +80,9 @@
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
             </ui:NavigationView.FooterMenuItems>
-            <ui:Frame x:Name="frame"/>
+            <ScrollViewer>
+                <ui:Frame x:Name="frame"/>
+            </ScrollViewer>
         </ui:NavigationView>
     </Grid>
 </Window>

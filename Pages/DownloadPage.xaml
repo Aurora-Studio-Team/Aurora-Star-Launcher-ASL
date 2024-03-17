@@ -13,28 +13,32 @@
         <TextBlock Text="下载" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,15,0,0" FontSize="25"/>
         <Border Style="{StaticResource Style_ContentBorder}" Margin="15,65,15,65">
             <Grid>
-                <Expander Header="Minecraft" Margin="15,15,15,15" VerticalAlignment="Top">
-                    <ListBox x:Name="Minecraft_List">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <StackPanel Orientation="Vertical">
-                                        <TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="14"/>
-                                        <TextBlock>
-                                           <Run Text="发布时间："/>
-                                           <Run Text="{Binding ReleaseTime}"/>
-                                        </TextBlock>
-                                    </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </Expander>
+                <Border Style="{StaticResource Style_ContentBorder}" Margin="5,10,5,10" VerticalAlignment="Top">
+                    <Grid>
+                        <Expander Header="Minecraft" Margin="10,5,10,5" VerticalAlignment="Center">
+                            <ListBox x:Name="Minecraft_List">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="14"/>
+                                                <TextBlock>
+                                                   <Run Text="发布时间："/>
+                                                   <Run Text="{Binding ReleaseTime}"/>
+                                                </TextBlock>
+                                            </StackPanel>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Expander>
+                    </Grid>
+                </Border>
             </Grid>
         </Border>
         <Button Content="刷新" Height="45" VerticalAlignment="Bottom" x:Name="GetVersionsList" HorizontalAlignment="Right" Margin="0,0,120,10" Click="GetVersionsList_Click"/>
         <Button Content="安装此版本" Background="BlueViolet" Height="45" VerticalAlignment="Bottom" x:Name="Install" HorizontalAlignment="Right" Margin="0,0,15,10" Click="Install_Click"/>
-        <ProgressBar x:Name="jdt" Margin="0,0,180,20" Height="20" Width="600" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        <ProgressBar x:Name="jdt" Margin="0,0,180,20" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
         <ui:InfoBar x:Name="Footer_Tip" IsOpen="False" Margin="15,0,15,15" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>

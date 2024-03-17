@@ -14,6 +14,9 @@ namespace AuroraStarLauncher.Pages
         public SettingsPage()
         {
             InitializeComponent();
+
+            
+
         }
 
         // 主题切换

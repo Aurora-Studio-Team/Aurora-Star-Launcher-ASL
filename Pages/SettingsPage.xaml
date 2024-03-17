@@ -58,7 +58,7 @@
                     <TextBlock Text="在此设置游戏Java" FontSize="12"/>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Center" Margin="0,0,15,0" HorizontalAlignment="Right" Orientation="Horizontal">
-                    <ComboBox Width="300" x:Name="Game_Java"/>
+                    <ComboBox ui:ControlHelper.PlaceholderText="请选择Java" Width="300" x:Name="Game_Java"/>
                 </StackPanel>
             </Grid>
         </Border>
