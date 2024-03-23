@@ -1,5 +1,6 @@
 ﻿using iNKORE.UI.WPF.Modern;
 using iNKORE.UI.WPF.Modern.Controls;
+using StarLight_Core.Utilities;
 using System.Windows;
 using System.Windows.Controls;
 using Page = System.Windows.Controls.Page;
@@ -11,12 +12,29 @@ namespace AuroraStarLauncher.Pages
     /// </summary>
     public partial class SettingsPage : Page
     {
+        public static ComboBox Java { get; set; } = new ComboBox();
+        public static TextBox Window_W { get; set; } = new TextBox();
+        public static TextBox Window_H { get; set; } = new TextBox();
+        public static TextBox MemoryBox_Maxi { get; set; } = new TextBox();
+        public static TextBox MemoryBox_Mini { get; set; } = new TextBox();
+
         public SettingsPage()
         {
             InitializeComponent();
 
-            
+            Java = Game_Java;
+            Window_W = Game_Window_Width;
+            Window_H = Game_Window_Height;
+            MemoryBox_Maxi = Game_Maximum_Memory;
+            MemoryBox_Mini = Game_Minimum_Memory;
 
+            // 自动寻找Java
+            var javaInfo = JavaUtil.GetJavas();
+            string javaPath = javaInfo.First().JavaPath;
+            Java.DisplayMemberPath = "JavaLibraryPath";
+            Java.SelectedValuePath = "JavaLibraryPath";
+            Java.ItemsSource = javaInfo;
+            Java.SelectedItem = 0;
         }
 
         // 主题切换

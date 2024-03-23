@@ -11,29 +11,38 @@
 
     <Grid>
         <TextBlock Text="下载" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,15,0,0" FontSize="25"/>
-        <Border Style="{StaticResource Style_ContentBorder}" Margin="15,65,15,65">
+        <Border Style="{StaticResource Style_ContentBorder}" Margin="15,65,15,65" VerticalAlignment="Top" Height="105">
             <Grid>
-                <Border Style="{StaticResource Style_ContentBorder}" Margin="5,10,5,10" VerticalAlignment="Top">
-                    <Grid>
-                        <Expander Header="Minecraft" Margin="10,5,10,5" VerticalAlignment="Center">
-                            <ListBox x:Name="Minecraft_List">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <Grid>
-                                            <StackPanel Orientation="Vertical">
-                                                <TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="14"/>
-                                                <TextBlock>
+                <Image Height="45" Width="45" Margin="25,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <StackPanel Orientation="Vertical" Margin="85,15,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <TextBlock Text="版本名称" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Text="无附加安装" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="25,60,25,0" VerticalAlignment="Top">
+                    <Label Content="版本名称：" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="Download_Game_Name" Margin="5,0,0,0" Width="635" />
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Style="{StaticResource Style_ContentBorder}" Margin="15,180,15,65" VerticalAlignment="Top">
+            <Grid>
+                <Expander Header="Minecraft" Margin="10,5,10,5" VerticalAlignment="Center">
+                    <ListBox x:Name="Minecraft_List">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="14"/>
+                                        <TextBlock>
                                                    <Run Text="发布时间："/>
                                                    <Run Text="{Binding ReleaseTime}"/>
-                                                </TextBlock>
-                                            </StackPanel>
-                                        </Grid>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-                        </Expander>
-                    </Grid>
-                </Border>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Expander>
             </Grid>
         </Border>
         <Button Content="刷新" Height="45" VerticalAlignment="Bottom" x:Name="GetVersionsList" HorizontalAlignment="Right" Margin="0,0,120,10" Click="GetVersionsList_Click"/>

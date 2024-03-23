@@ -52,6 +52,11 @@
                         <iconPacks:PackIconMaterialLight Kind="Power" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="版本管理" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.VersionsManagerPage" IsSelected="True">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Manage}" FontSize="16"/>
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="下载" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.DownloadPage">
                     <ui:NavigationViewItem.Icon>
                         <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Download}" FontSize="16"/>
@@ -59,14 +64,14 @@
                 </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="联机" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.LinksPage">
                     <ui:NavigationViewItem.Icon>
-                        <iconPacks:PackIconRadixIcons Kind="Link2" />
+                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Link}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
             </ui:NavigationView.MenuItems>
             <ui:NavigationView.FooterMenuItems>
                 <ui:NavigationViewItem Content="帮助" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.HelpsPage">
                     <ui:NavigationViewItem.Icon>
-                        <iconPacks:PackIconVaadinIcons Kind="QuestionCircleOutline" />
+                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Help}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="设置" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.SettingsPage">
@@ -80,9 +85,7 @@
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
             </ui:NavigationView.FooterMenuItems>
-            <ScrollViewer>
-                <ui:Frame x:Name="frame"/>
-            </ScrollViewer>
+            <ui:Frame x:Name="frame"/>
         </ui:NavigationView>
     </Grid>
 </Window>

@@ -12,7 +12,15 @@
 
     <Grid>
         <Image x:Name="User_Image" Height="150" Width="150" VerticalAlignment="Top" Margin="0,20,0,0"/>
-        <TextBox ui:ControlHelper.PlaceholderText="请输入用户名" Width="225" x:Name="User_Name" Text="" FontSize="22" VerticalAlignment="Top" Margin="0,200,0,0"/>
-        <Button x:Name="Start" Content="🎮 启动游戏" FontSize="20" Background="BlueViolet" Height="80" Width="220" VerticalAlignment="Top" Margin="0,300,0,0" Click="Start_Click" HorizontalAlignment="Stretch"/>
+        <TextBox ui:ControlHelper.PlaceholderText="请输入用户名" Width="225" x:Name="User_Name" Text="" FontSize="22" VerticalAlignment="Top" Margin="0,180,0,0"/>
+        <Button x:Name="Start" FontSize="20" Background="BlueViolet" Height="80" Width="220" VerticalAlignment="Top" Margin="0,260,0,0" Click="Start_Click" HorizontalAlignment="Stretch">
+            <StackPanel>
+                <TextBlock Text="启动游戏" HorizontalAlignment="Center"/>
+                <TextBlock Text="请选择游戏版本" FontSize="11" HorizontalAlignment="Center" />
+            </StackPanel>
+        </Button>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,345,0,0">
+            <Button Content="版本选择" Height="30" Width="220" HorizontalAlignment="Stretch"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -81,6 +81,10 @@ namespace AuroraStarLauncher
                 {
                     frame.Content = new HomePage();
                 }
+                if (navPageType == typeof(VersionsManagerPage))
+                {
+                    frame.Content = new VersionsManagerPage();
+                }
                 if (navPageType == typeof(DownloadPage))
                 {
                     frame.Content = new DownloadPage();
