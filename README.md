@@ -7,12 +7,12 @@
 
 ## 特别鸣谢
 [之风](https://github.com/zhi-feng2008)
-[Yaojun Zhou](https://github.com/NotYoojun)
-[iNKORE Studio](https://github.com/iNKORE-Public)
+[Yoojun Zhou](https://github.com/NotYoojun)
+[iNKORE Studios](https://github.com/iNKORE-Public)
 ## NuGet包
 StarLight_Core
 
-iNKORE UI WPF Moderm
+[iNKORE.UI.WPF.Modern](https://github.com/iNKORE-Public/UI.WPF.Modern)
 
 Costura Fody
 
