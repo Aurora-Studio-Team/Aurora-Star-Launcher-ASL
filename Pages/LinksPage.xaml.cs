@@ -29,13 +29,6 @@ namespace AuroraStarLauncher.Pages
                 string jsonContent = File.ReadAllText(FilePath);
                 var loginResponse = JsonConvert.DeserializeObject<LoginResponse>(jsonContent);
 
-                Console.WriteLine("User: " + loginResponse.user);
-                Console.WriteLine("Login Time: " + loginResponse.loginTime);
-                Console.WriteLine("Token: " + loginResponse.token);
-                Console.WriteLine("PN: " + loginResponse.pn);
-                Console.WriteLine("Status: " + loginResponse.status);
-                Console.WriteLine("Message: " + loginResponse.msg);
-
                 PN_User_Name.Text = loginResponse.user;
                 PN_User_ID.Text = "用户ID：" + loginResponse.pn;
                 PN_Logintime.Text = "登录时间：" + loginResponse.loginTime;
@@ -63,13 +56,6 @@ namespace AuroraStarLauncher.Pages
                     await HttpUtil.SendHttpPostRequest("https://PolarisNetwork.cloud:5555/api/v1/Auth/login",
                         JsonConvert.SerializeObject(pnLoginData),"application/json");
                 LoginResponse loginResponse = JsonConvert.DeserializeObject<LoginResponse>(loginData);
-
-                Console.WriteLine("User: " + loginResponse.user);
-                Console.WriteLine("Login Time: " + loginResponse.loginTime);
-                Console.WriteLine("Token: " + loginResponse.token);
-                Console.WriteLine("PN: " + loginResponse.pn);
-                Console.WriteLine("Status: " + loginResponse.status);
-                Console.WriteLine("Message: " + loginResponse.msg);
 
                 string jsonString = JsonConvert.SerializeObject(loginResponse, Formatting.Indented);
                 string applicationDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);

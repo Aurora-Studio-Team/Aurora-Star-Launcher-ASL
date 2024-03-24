@@ -3,12 +3,61 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
       xmlns:local="clr-namespace:AuroraStarLauncher.Pages.LoginPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="380" d:DesignWidth="300"
       Title="OtherLoginPage">
 
     <Grid>
-        
+        <TabControl ui:TabControlHelper.IsAddTabButtonVisible="False" VerticalAlignment="Top" >
+            <TabItem Header="外置登录">
+                <Grid>
+                    <StackPanel Margin="5,10,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Label Content="验证服务器地址:" HorizontalAlignment="Left"/>
+                        <TextBox ui:ControlHelper.PlaceholderText="默认为LittleSkin" Width="225" x:Name="Login_Server" Text="" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Margin="5,65,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Label Content="用户邮箱：" HorizontalAlignment="Left"/>
+                        <TextBox Width="225" x:Name="User_Email" Text="" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Margin="5,120,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Label Content="验证服务器地址:" HorizontalAlignment="Left"/>
+                        <PasswordBox Width="225" x:Name="User_Password" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                    </StackPanel>
+                    <Button x:Name="Start" FontSize="20" Background="BlueViolet" Height="80" Width="220" VerticalAlignment="Top" Margin="0,225,0,0" Click="Start_Click" HorizontalAlignment="Stretch">
+                        <StackPanel>
+                            <TextBlock Text="启动游戏" HorizontalAlignment="Center"/>
+                            <TextBlock Text="请选择游戏版本" FontSize="11" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="统一通行证">
+                <Grid>
+                    <StackPanel Margin="5,10,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Label Content="服务器ID:" HorizontalAlignment="Left"/>
+                        <TextBox ui:ControlHelper.PlaceholderText="" Width="225" x:Name="Login_Server_1" Text="" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Margin="5,65,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Label Content="用户名：" HorizontalAlignment="Left"/>
+                        <TextBox Width="225" x:Name="User_Name_1" Text="" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Margin="5,120,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Label Content="验证服务器地址:" HorizontalAlignment="Left"/>
+                        <PasswordBox Width="225" x:Name="User_Password_1" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                    </StackPanel>
+                    <Button x:Name="Start_1" FontSize="20" Background="BlueViolet" Height="80" Width="220" VerticalAlignment="Top" Margin="0,225,0,0" Click="Start_1_Click" HorizontalAlignment="Stretch">
+                        <StackPanel>
+                            <TextBlock Text="启动游戏" HorizontalAlignment="Center"/>
+                            <TextBlock Text="请选择游戏版本" FontSize="11" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,345,0,0">
+            <Button Content="版本选择" x:Name="Versions_Manager" Height="30" Width="220" HorizontalAlignment="Stretch" Click="Versions_Manager_Click"/>
+        </StackPanel>
     </Grid>
 </Page>

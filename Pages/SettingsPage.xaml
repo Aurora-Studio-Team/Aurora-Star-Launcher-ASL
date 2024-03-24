@@ -75,7 +75,7 @@
                     <Label Content="最大：" Margin="10" FontSize="15"/>
                     <TextBox Text="2048" x:Name="Game_Maximum_Memory" Height="30" Width="100"/>
                     <Label Content="最小：" Margin="10" FontSize="15"/>
-                    <TextBox Text="0" x:Name="Game_Minimum_Memory" Height="30" Width="100"/>
+                    <TextBox Text="1024" x:Name="Game_Minimum_Memory" Height="30" Width="100"/>
                 </StackPanel>
             </Grid>
         </Border>

@@ -5,6 +5,7 @@ using iNKORE.UI.WPF.Modern.Media.Animation;
 using iNKORE.UI.WPF.Modern;
 using System.IO;
 using System.Reflection;
+using System.Windows.Controls;
 
 namespace AuroraStarLauncher
 {
@@ -13,9 +14,13 @@ namespace AuroraStarLauncher
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static iNKORE.UI.WPF.Modern.Controls.Frame main_frame { get; set; } = new iNKORE.UI.WPF.Modern.Controls.Frame();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            main_frame = frame;
 
             //默认主题
             ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light;

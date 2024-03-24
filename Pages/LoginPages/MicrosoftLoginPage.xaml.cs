@@ -5,6 +5,11 @@ using MessageBox = iNKORE.UI.WPF.Modern.Controls.MessageBox;
 using System.Diagnostics;
 using StarLight_Core.Launch;
 using StarLight_Core.Models.Launch;
+using StarLight_Core.Models.Authentication;
+using Newtonsoft.Json;
+using System.Reflection;
+using System.IO;
+using Page = System.Windows.Controls.Page;
 
 namespace AuroraStarLauncher.Pages.LoginPages
 {
@@ -13,9 +18,13 @@ namespace AuroraStarLauncher.Pages.LoginPages
     /// </summary>
     public partial class MicrosoftLoginPage : Page
     {
+
+        private MicrosoftAccount userInfo { get; set; }
+
         public MicrosoftLoginPage()
         {
             InitializeComponent();
+
         }
 
         private async void Login_Click(object sender, RoutedEventArgs e)
@@ -26,7 +35,7 @@ namespace AuroraStarLauncher.Pages.LoginPages
             Process.Start("explorer.exe", deviceCodeInfo.VerificationUri);
             MessageBox.Show("请在浏览器中输入您的用户验证代码：" + deviceCodeInfo.UserCode, "Microsoft验证");
             var tokenInfo = await auth.GetTokenResponse(deviceCodeInfo);
-            var userInfo = await auth.MicrosoftAuthAsync(tokenInfo, x =>
+            userInfo = await auth.MicrosoftAuthAsync(tokenInfo, x =>
             {
                 Console.WriteLine(x);
             });
@@ -48,12 +57,12 @@ namespace AuroraStarLauncher.Pages.LoginPages
                     },
                     Account = new()
                     {
-                        //BaseAccount = userInfo // 账户
+                        BaseAccount = userInfo // 账户
                     },
                     GameCoreConfig = new()
                     {
-                        Root = ".minecraft", // MC 路径(可以是绝对的也可以是相对的,自动判断)
-                        Version = "LuZhouMTRServer1.18.2",
+                        Root = VersionsManagerPage.GamePath.Text, // MC 路径(可以是绝对的也可以是相对的,自动判断)
+                        Version = "1.16.5",
                         IsVersionIsolation = true,
                     },
                     JavaConfig = new()
@@ -72,9 +81,13 @@ namespace AuroraStarLauncher.Pages.LoginPages
             }
             catch
             {
-                
-            }
-            
+                MessageBox.Show("启动失败！");
+            }           
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.main_frame.Content = new VersionsManagerPage();
         }
     }
 }

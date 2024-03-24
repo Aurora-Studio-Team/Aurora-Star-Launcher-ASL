@@ -39,8 +39,8 @@ namespace AuroraStarLauncher.Pages.LoginPages
                     },
                     GameCoreConfig = new()
                     {
-                        Root = "D:\\PCL2\\.minecraft", // MC 路径(可以是绝对的也可以是相对的,自动判断)
-                        Version = "1.20.1原版生存(基础整合包)",
+                        Root = VersionsManagerPage.GamePath.Text, // MC 路径(可以是绝对的也可以是相对的,自动判断)
+                        Version = "1.16.5",
                         IsVersionIsolation = true,
                     },
                     JavaConfig = new()
@@ -58,13 +58,18 @@ namespace AuroraStarLauncher.Pages.LoginPages
                 }
                 if (la.Status == Status.Succeeded)
                 {
-                    MessageBox.Show("" + la.Args);
+                    MessageBox.Show(la.Args.ToString());
                 }
             }
             catch(Exception ex)
             {
                 MessageBox.Show("启动失败！", "启动失败");
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.main_frame.Content = new VersionsManagerPage();
         }
     }
 }

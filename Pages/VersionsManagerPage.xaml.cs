@@ -20,9 +20,13 @@ namespace AuroraStarLauncher.Pages
     /// </summary>
     public partial class VersionsManagerPage : Page
     {
+        public static TextBox GamePath { get; set; } = new TextBox();
+
         public VersionsManagerPage()
         {
             InitializeComponent();
+
+            GamePath = Game_Path;
         }
     }
 }
