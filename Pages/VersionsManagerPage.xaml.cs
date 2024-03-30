@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using StarLight_Core.Utilities;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AuroraStarLauncher.Pages
 {
@@ -21,12 +9,21 @@ namespace AuroraStarLauncher.Pages
     public partial class VersionsManagerPage : Page
     {
         public static TextBox GamePath { get; set; } = new TextBox();
+        public static ComboBox GameVer { get; set; } = new ComboBox();
 
         public VersionsManagerPage()
         {
             InitializeComponent();
 
             GamePath = Game_Path;
+            GameVer = Game_Versions;
+
+            // 自动寻找版本
+            var versions = GameCoreUtil.GetGameCores(Game_Path.Text);
+            Game_Versions.ItemsSource = versions;//绑定数据源
+            Game_Versions.DisplayMemberPath = "Id";//设置comboBox显示的为版本Id
+            Game_Versions.SelectedIndex = 0;
+            Game_Versions_Manager_Settings_Name.Text = Game_Versions.SelectedValue.ToString();
         }
     }
 }

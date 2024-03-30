@@ -24,13 +24,12 @@ namespace AuroraStarLauncher.Pages.LoginPages
         public MicrosoftLoginPage()
         {
             InitializeComponent();
-
         }
 
         private async void Login_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Microsoft网页加载过慢，如无法访问，请使用加速器等网络（代理）工具！", "温馨提示");
-            var auth = new MicrosoftAuthentication("a0ceb477-0738-47fa-8c93-52d892aa866a");
+            var auth = new MicrosoftAuthentication("e1e383f9-59d9-4aa2-bf5e-73fe83b15ba0");
             var deviceCodeInfo = await auth.RetrieveDeviceCodeInfo();
             Process.Start("explorer.exe", deviceCodeInfo.VerificationUri);
             MessageBox.Show("请在浏览器中输入您的用户验证代码：" + deviceCodeInfo.UserCode, "Microsoft验证");
