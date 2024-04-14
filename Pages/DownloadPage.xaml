@@ -10,8 +10,7 @@
       Title="DownloadPage">
 
     <Grid>
-        <TextBlock Text="下载" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,15,0,0" FontSize="25"/>
-        <Border Style="{StaticResource Style_ContentBorder}" Margin="15,65,15,65" VerticalAlignment="Top" Height="105">
+        <Border Style="{StaticResource Style_ContentBorder}" Margin="15,10,15,65" VerticalAlignment="Top" Height="105">
             <Grid>
                 <Image Height="45" Width="45" Margin="25,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                 <StackPanel Orientation="Vertical" Margin="85,15,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
@@ -24,7 +23,7 @@
                 </StackPanel>
             </Grid>
         </Border>
-        <Border Style="{StaticResource Style_ContentBorder}" Margin="15,180,15,65" VerticalAlignment="Top">
+        <Border Style="{StaticResource Style_ContentBorder}" Margin="15,120,15,65" VerticalAlignment="Top">
             <Grid>
                 <Expander Header="Minecraft" Margin="10,5,10,5" VerticalAlignment="Center">
                     <ListBox x:Name="Minecraft_List">

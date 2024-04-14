@@ -1,15 +1,12 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
 using StarLight_Core.Authentication;
 using MessageBox = iNKORE.UI.WPF.Modern.Controls.MessageBox;
 using System.Diagnostics;
 using StarLight_Core.Launch;
 using StarLight_Core.Models.Launch;
 using StarLight_Core.Models.Authentication;
-using Newtonsoft.Json;
-using System.Reflection;
-using System.IO;
 using Page = System.Windows.Controls.Page;
+using StarLight_Core.Enum;
 
 namespace AuroraStarLauncher.Pages.LoginPages
 {
@@ -77,7 +74,11 @@ namespace AuroraStarLauncher.Pages.LoginPages
                 {
                     Console.WriteLine($"{report.Description} ({report.Percentage}%)"); // 显示当前操作与进度
                 }
-            }
+                if (la.Status == Status.Succeeded)
+                {
+                    MessageBox.Show(la.Args.ToString());
+                }
+        }
             catch
             {
                 MessageBox.Show("启动失败！");

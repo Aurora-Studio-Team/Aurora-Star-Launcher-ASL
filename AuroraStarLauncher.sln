@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuroraStarLauncher", "AuroraStarLauncher.csproj", "{43A17EA4-8840-4BBE-BF98-6959C5CB91BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuroraStarLauncher", "AuroraStarLauncher.csproj", "{43A17EA4-8840-4BBE-BF98-6959C5CB91BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_NeutralResourcesLanguage = zh-Hans
 		SolutionGuid = {ADCCD47A-0800-41D2-8DFE-C8C00D1D84AE}
 	EndGlobalSection
 EndGlobal

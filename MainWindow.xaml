@@ -16,30 +16,10 @@
         UseLayoutRounding="True"
         mc:Ignorable="d"
         ui:TitleBar.IsIconVisible="True"
+        ui:TitleBar.Height="45"
         Title="Aurora Star Launcher" 
-        ui:TitleBar.Height="35"
         Height="500" 
         Width="850">
-    <Window.Resources>
-        <ResourceDictionary>
-            <Style x:Key="Style_ContentBorder" TargetType="Border">
-                <Setter Property="BorderBrush" Value="#0F000000"/>
-                <Setter Property="Background" Value="#33FFFFFF"/>
-                <Setter Property="BorderThickness" Value="1"/>
-                <Setter Property="CornerRadius" Value="8"/>
-            </Style>
-            <Style x:Key="Style_ToolboxButton" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
-                <Setter Property="Background" Value="Transparent"/>
-                <Setter Property="Margin" Value="2"/>
-                <Setter Property="BorderBrush" Value="Transparent"/>
-                <Setter Property="BorderThickness" Value="0"/>
-                <Setter Property="HorizontalAlignment" Value="Stretch"/>
-                <Setter Property="VerticalAlignment" Value="Stretch"/>
-                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
-            </Style>
-        </ResourceDictionary>
-    </Window.Resources>
     <Grid>
         <!-- 导航 -->
         <ui:NavigationView x:Name="NavView" 
@@ -85,7 +65,7 @@
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
             </ui:NavigationView.FooterMenuItems>
-            <ui:Frame x:Name="frame"/>
+            <ui:Frame x:Name="frame" Margin="50,0,10,0"/>
         </ui:NavigationView>
     </Grid>
 </Window>

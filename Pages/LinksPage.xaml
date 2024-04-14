@@ -11,7 +11,7 @@
       Title="LinksPage">
 
     <Grid>
-        <TabControl Background="Transparent" ui:TabControlHelper.IsAddTabButtonVisible="False">
+        <TabControl Background="Transparent" Margin="0,10,0,0" ui:TabControlHelper.IsAddTabButtonVisible="False">
             <TabItem Header="账户">
                 <Grid>
                     <TextBlock Text="仪表盘" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,10,0,0" FontSize="25"/>

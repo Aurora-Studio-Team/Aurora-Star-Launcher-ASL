@@ -1,4 +1,5 @@
 ﻿using AuroraStarLauncher.Pages.LoginPages;
+using System.Windows.Controls;
 
 namespace AuroraStarLauncher.Pages
 {
@@ -10,9 +11,30 @@ namespace AuroraStarLauncher.Pages
         public HomePage()
         {
             InitializeComponent();
-            MS.Content = new MicrosoftLoginPage();
-            ON.Content = new OffineLoginPage();
-            LT.Content = new OtherLoginPage();
+
+            Login_Pages.Navigate(typeof(MicrosoftLoginPage));
+        }
+
+        private void Use_Login_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                var t = (ComboBoxItem)Use_Login.SelectedItem;
+                switch (t.Tag)
+                {
+                    case "Microsoft":
+                        Login_Pages.Navigate(typeof(MicrosoftLoginPage));
+                        break;
+                    case "Offine":
+                        Login_Pages.Navigate(typeof(OffineLoginPage));
+                        break;
+                    case "Other":
+                        Login_Pages.Navigate(typeof(OtherLoginPage));
+                        break;
+                }
+            }
+            catch { }
+        
         }
     }
 }

@@ -21,6 +21,7 @@ namespace AuroraStarLauncher
             InitializeComponent();
 
             main_frame = frame;
+            NavView.Header = "启动";
 
             //默认主题
             ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light;
@@ -80,37 +81,44 @@ namespace AuroraStarLauncher
         private void NavigationView_Navigate(Type navPageType, NavigationTransitionInfo transitionInfo)
         {
             Type preNavPageType = frame.Content.GetType();
-            if (navPageType is not null && !Type.Equals(navPageType, preNavPageType))
+            if (navPageType is not null && !Equals(navPageType, preNavPageType))
             {
                 if (navPageType == typeof(HomePage))
                 {
                     frame.Content = new HomePage();
+                    NavView.Header = "启动";
                 }
                 if (navPageType == typeof(VersionsManagerPage))
                 {
                     frame.Content = new VersionsManagerPage();
+                    NavView.Header = "版本管理";
                 }
                 if (navPageType == typeof(DownloadPage))
                 {
                     frame.Content = new DownloadPage();
+                    NavView.Header = "下载";
                 }
                 if (navPageType == typeof(LinksPage))
                 {
                     frame.Content = new LinksPage();
+                    NavView.Header = "联机";
                 }
                 if (navPageType == typeof(HelpsPage))
                 {
                     frame.Content = new HelpsPage();
+                    NavView.Header = "帮助";
                 }
                 if (navPageType == typeof(SettingsPage))
                 {
                     frame.Content = new SettingsPage();
+                    NavView.Header = "设置";
                 }
                 if (navPageType == typeof(AboutPage))
                 {
                     frame.Content = new AboutPage();
+                    NavView.Header = "关于";
                 }
-            }
+            }       
         }
     }
 }

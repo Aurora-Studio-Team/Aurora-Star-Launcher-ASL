@@ -4,22 +4,35 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
+      xmlns:iconPacks = "http://metro.mahapps.com/winfx/xaml/iconpacks"
       xmlns:local="clr-namespace:AuroraStarLauncher.Pages"
       xmlns:hc="https://handyorg.github.io/handycontrol"
       mc:Ignorable="d" 
       d:DesignHeight="440" d:DesignWidth="790"
       Title="HomePage">
     <Grid>
-        <TabControl Height="425" Background="Transparent" Width="400" ui:TabControlHelper.IsAddTabButtonVisible="False" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top">
-            <TabItem Background="Transparent" Header="微软登录">
-                <ui:Frame x:Name="MS" VerticalAlignment="Top"/>
-            </TabItem>
-            <TabItem Background="Transparent" Header="离线登录">
-                <ui:Frame x:Name="ON" VerticalAlignment="Top"/>
-            </TabItem>
-            <TabItem Background="Transparent" Header="第三方登录">
-                <ui:Frame x:Name="LT" VerticalAlignment="Top"/>
-            </TabItem>
-        </TabControl>
+        <StackPanel HorizontalAlignment="Right" Margin="10,10,10,10">
+            <ComboBox Width="240" Margin="10,10,10,10" x:Name="Use_Login" SelectionChanged="Use_Login_SelectionChanged">
+                <ComboBoxItem Tag="Microsoft" IsSelected="True">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <iconPacks:PackIconBootstrapIcons Kind="ShieldCheck" />
+                        <TextBlock Text=" 微软登录"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem Tag="Offine">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <iconPacks:PackIconMaterial Kind="LinkVariantOff" />
+                        <TextBlock Text=" 离线登录"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem Tag="Other">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <iconPacks:PackIconZondicons Kind="Servers" />
+                        <TextBlock Text=" 第三方登录"/>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+            <ui:Frame x:Name="Login_Pages"/>
+        </StackPanel>
     </Grid>
 </Page>
