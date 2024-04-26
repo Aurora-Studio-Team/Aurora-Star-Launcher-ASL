@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace AuroraStarLauncher
+namespace Pre_Alpha
 {
     /// <summary>
     /// Interaction logic for App.xaml
