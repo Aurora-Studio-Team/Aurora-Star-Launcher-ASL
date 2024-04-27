@@ -12,14 +12,53 @@
         ui:WindowHelper.UseModernWindowStyle="True"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ui:NavigationView x:Name="Menu" PaneDisplayMode="Auto" IsPaneOpen="False" IsBackButtonVisible="Collapsed">
+        <ui:NavigationView x:Name="Menu" IsPaneOpen="False" IsBackButtonVisible="Collapsed">
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem Content="启动">
                     <ui:NavigationViewItem.Icon>
                         <iconPacks:PackIconMaterial Kind="Power" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="下载">
+                    <ui:NavigationViewItem.Icon>
+                        <iconPacks:PackIconMaterial Kind="Download" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="版本">
+                    <ui:NavigationViewItem.Icon>
+                        <iconPacks:PackIconMaterial Kind="CardMultiple" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="联机">
+                    <ui:NavigationViewItem.Icon>
+                        <iconPacks:PackIconMaterial Kind="ServerNetwork" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
             </ui:NavigationView.MenuItems>
+            <ui:NavigationView.FooterMenuItems>
+                <ui:NavigationViewItem Content="账户">
+                    <ui:NavigationViewItem.Icon>
+                        <iconPacks:PackIconMaterial Kind="Account" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="设置">
+                    <ui:NavigationViewItem.Icon>
+                        <iconPacks:PackIconMaterial Kind="Cog" />
+                    </ui:NavigationViewItem.Icon>
+                    <ui:NavigationViewItem.MenuItems>
+                        <ui:NavigationViewItem Content="帮助">
+                            <ui:NavigationViewItem.Icon>
+                                <iconPacks:PackIconMaterial Kind="Help" />
+                            </ui:NavigationViewItem.Icon>
+                        </ui:NavigationViewItem>
+                        <ui:NavigationViewItem Content="关于">
+                            <ui:NavigationViewItem.Icon>
+                                <iconPacks:PackIconMaterial Kind="InformationOutline" />
+                            </ui:NavigationViewItem.Icon>
+                        </ui:NavigationViewItem>
+                    </ui:NavigationViewItem.MenuItems>
+                </ui:NavigationViewItem>
+            </ui:NavigationView.FooterMenuItems>
         </ui:NavigationView>
     </Grid>
 </Window>
