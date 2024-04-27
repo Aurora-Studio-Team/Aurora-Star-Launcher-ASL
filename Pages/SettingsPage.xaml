@@ -53,7 +53,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="200"/>
                     </Grid.ColumnDefinitions>
-                    <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Light}" Grid.RowSpan="2" Margin="5,15,20,15"/>
+                    <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Light}" Grid.RowSpan="2" Margin="5,15,20,15"/>
                     <TextBlock Text="主题" Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,2"/>
                     <TextBlock Text="再此设置应用程序的主题" Grid.Column="1" VerticalAlignment="Top" Grid.Row="1" Margin="0,2,20,5" Opacity="0.615" FontSize="12" TextTrimming="CharacterEllipsis" TextWrapping="WrapWithOverflow"/>
                     <StackPanel Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Center" Orientation="Horizontal" Width="199">
@@ -75,11 +75,11 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="200"/>
                     </Grid.ColumnDefinitions>
-                    <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.LocaleLanguage}" Grid.RowSpan="2" Margin="5,15,20,15"/>
+                    <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.LocaleLanguage}" Grid.RowSpan="2" Margin="5,15,20,15"/>
                     <TextBlock Text="语言" Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,2"/>
                     <TextBlock Text="再此设置应用程序的语言" Grid.Column="1" VerticalAlignment="Top" Grid.Row="1" Margin="0,2,20,5" Opacity="0.615" FontSize="12" TextTrimming="CharacterEllipsis" TextWrapping="WrapWithOverflow"/>
                     <StackPanel Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Right" Orientation="Horizontal" Width="199">
-                        <ComboBox x:Name="Set_Languages" Width="200" HorizontalAlignment="Right">
+                        <ComboBox x:Name="LanguageList" Width="200" HorizontalAlignment="Right">
                             <ComboBoxItem>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="简体中文（zh-CN）"/>
@@ -114,7 +114,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="299"/>
                     </Grid.ColumnDefinitions>
-                    <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.WindowSnipping}" Grid.RowSpan="2" Margin="5,15,20,15"/>
+                    <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.WindowSnipping}" Grid.RowSpan="2" Margin="5,15,20,15"/>
                     <TextBlock Text="窗口大小" Grid.Column="1" VerticalAlignment="Top" Margin="0,8,0,0" Height="15"/>
                     <TextBlock Text="在此设置游戏窗口的大小" Grid.Column="1" VerticalAlignment="Top" Grid.Row="1" Margin="0,2,20,0" Opacity="0.615" FontSize="12" TextTrimming="CharacterEllipsis" TextWrapping="WrapWithOverflow" Height="15"/>
                     <StackPanel Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Center" Orientation="Horizontal" Width="300">

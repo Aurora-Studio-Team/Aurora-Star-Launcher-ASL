@@ -1,8 +1,10 @@
 ﻿using iNKORE.UI.WPF.Modern;
 using iNKORE.UI.WPF.Modern.Controls;
 using StarLight_Core.Utilities;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
+using WpfApp1.Resources;
 using Page = System.Windows.Controls.Page;
 
 namespace AuroraStarLauncher.Pages
@@ -72,6 +74,11 @@ namespace AuroraStarLauncher.Pages
                 Footer_Tip.Title = "切换失败！";
                 Footer_Tip.IsOpen = true;
             }
+        }
+
+        private void LanguageList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            LanguageManager.Instance.ChangeLanguage(new CultureInfo((sender as ComboBox).SelectedItem.ToString()));
         }
     }
 }

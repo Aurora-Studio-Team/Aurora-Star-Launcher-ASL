@@ -51,7 +51,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="299"/>
                     </Grid.ColumnDefinitions>
-                    <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Folder}" Grid.RowSpan="2" Margin="5,15,20,15"/>
+                    <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Folder}" Grid.RowSpan="2" Margin="5,15,20,15"/>
                     <TextBlock Text="游戏目录" Grid.Column="1" VerticalAlignment="Top" Margin="0,8,0,0" Height="15"/>
                     <TextBlock Text="在此设置游戏版本根目录" Grid.Column="1" VerticalAlignment="Top" Grid.Row="1" Margin="0,2,20,0" Opacity="0.615" FontSize="12" TextTrimming="CharacterEllipsis" TextWrapping="WrapWithOverflow" Height="15"/>
                     <StackPanel Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Center" Orientation="Horizontal" Width="300">

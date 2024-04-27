@@ -18,7 +18,7 @@
                     <Border Style="{StaticResource Style_ContentBorder}" Height="150" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,50,0,0">
                         <Grid>
                             <Label Height="25" Width="40" HorizontalAlignment="Left" Margin="10,10,160,0" VerticalAlignment="Top">
-                                <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.GuestUser}" FontSize="20"/>
+                                <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.GuestUser}" FontSize="20"/>
                             </Label>
                             <TextBlock Height="25" Width="150" Text="请登录" x:Name="PN_User_Name" FontSize="18" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top"/>
                             <TextBlock Height="20" Width="200" Text="用户ID：— — — —" x:Name="PN_User_ID" FontSize="14" HorizontalAlignment="Left" Margin="10,35,10,0" VerticalAlignment="Top"/>

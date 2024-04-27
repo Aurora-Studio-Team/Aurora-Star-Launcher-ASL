@@ -29,10 +29,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="iNKORE.UI.WPF.Modern" Version="0.9.26.3" />
+    <PackageReference Include="iNKORE.UI.WPF.Modern" Version="0.9.27" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="StarLight_Core" Version="1.3.3-Preview6" />
+    <PackageReference Include="StarLight_Core" Version="1.3.4-Preview7" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,7 +48,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Languages\Lang.resx">
+    <EmbeddedResource Update="Languages\Lang.zh-CN.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Lang.Designer.cs</LastGenOutput>
     </EmbeddedResource>

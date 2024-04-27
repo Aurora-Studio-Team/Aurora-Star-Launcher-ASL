@@ -16,10 +16,9 @@
         UseLayoutRounding="True"
         mc:Ignorable="d"
         ui:TitleBar.IsIconVisible="True"
-        ui:TitleBar.Height="45"
         Title="Aurora Star Launcher" 
-        Height="500" 
-        Width="850">
+        Height="575" 
+        Width="925">
     <Grid>
         <!-- 导航 -->
         <ui:NavigationView x:Name="NavView" 
@@ -34,34 +33,34 @@
                 </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="版本管理" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.VersionsManagerPage" IsSelected="True">
                     <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Manage}" FontSize="16"/>
+                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Manage}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="下载" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.DownloadPage">
                     <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Download}" FontSize="16"/>
+                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Download}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="联机" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.LinksPage">
                     <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Link}" FontSize="16"/>
+                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Link}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
             </ui:NavigationView.MenuItems>
             <ui:NavigationView.FooterMenuItems>
                 <ui:NavigationViewItem Content="帮助" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.HelpsPage">
                     <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Help}" FontSize="16"/>
+                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Help}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="设置" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.SettingsPage">
                     <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Settings}" FontSize="16"/>
+                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Settings}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
                 <ui:NavigationViewItem Content="关于" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.AboutPage">
                     <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Glyph="{x:Static ui:SegoeIcons.Info}" FontSize="16"/>
+                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Info}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
             </ui:NavigationView.FooterMenuItems>
