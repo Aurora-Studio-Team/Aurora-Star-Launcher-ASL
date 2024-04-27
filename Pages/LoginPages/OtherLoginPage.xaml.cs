@@ -4,6 +4,9 @@ using MessageBox = iNKORE.UI.WPF.Modern.Controls.MessageBox;
 using StarLight_Core.Launch;
 using StarLight_Core.Models.Launch;
 using Page = System.Windows.Controls.Page;
+using StarLight_Core.Models.Authentication;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace AuroraStarLauncher.Pages.LoginPages
 {
@@ -12,28 +15,35 @@ namespace AuroraStarLauncher.Pages.LoginPages
     /// </summary>
     public partial class OtherLoginPage : Page
     {
+        string ls { get; set; }
+        public List<string> Ygg_User_List { get; set; }
+
         public OtherLoginPage()
         {
             InitializeComponent();
         }
 
-        private async Task Start_ClickAsync(object sender,string ls, RoutedEventArgs e)
+        private async void Start_Click(object sender, RoutedEventArgs e)
         {
             if (Login_Server.Text == "")
             {
                 ls = "https://littleskin.cn/api/yggdrasil";
             }
-            else if(Login_Server.Text != "")
+            else if (Login_Server.Text != "")
             {
                 ls = Login_Server.Text;
             }
             else
             {
-                MessageBox.Show("无效的服务器","提示");
+                MessageBox.Show("无效的服务器", "提示");
             }
 
-            var auth = new YggdrasilAuthenticator(ls,User_Email.Text, User_Password.Password);
+            var auth = new YggdrasilAuthenticator(ls, User_Email.Text, User_Password.Password);
             var account = await auth.YggdrasilAuthAsync();
+            Ygg_User_List = new List<string>()
+            {
+                account.ToString(),
+            };
             try
             {
                 LaunchConfig args = new() // 配置启动参数
@@ -46,7 +56,7 @@ namespace AuroraStarLauncher.Pages.LoginPages
                     },
                     Account = new()
                     {
-                        BaseAccount = account // 账户
+                        //BaseAccount = account // 账户
                     },
                     GameCoreConfig = new()
                     {
