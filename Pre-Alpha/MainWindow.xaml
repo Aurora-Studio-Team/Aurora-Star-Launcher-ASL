@@ -59,6 +59,7 @@
                     </ui:NavigationViewItem.MenuItems>
                 </ui:NavigationViewItem>
             </ui:NavigationView.FooterMenuItems>
+            <Frame x:Name="MainFrame"/>
         </ui:NavigationView>
     </Grid>
 </Window>
