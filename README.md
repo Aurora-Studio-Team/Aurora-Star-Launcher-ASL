@@ -10,7 +10,7 @@
 [Yoojun Zhou](https://github.com/NotYoojun)
 [iNKORE Studios](https://github.com/iNKORE-Public)
 ## NuGet包
-StarLight_Core
+[StarLight_Core](https://github.com/Ink-Marks-Studio/StarLight.Core)
 
 [iNKORE.UI.WPF.Modern](https://github.com/iNKORE-Public/UI.WPF.Modern)
 
