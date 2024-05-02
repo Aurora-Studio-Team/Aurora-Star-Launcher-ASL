@@ -3,7 +3,7 @@
 
 [官网](#) (还没搭建好)
 
-许可证:GPL3.0
+许可证 : [GPL3.0](https://github.com/Aurora-Studio-Team/Aurora-Star-Launcher-ASL?tab=GPL-3.0-1-ov-file)
 
 ## 特别鸣谢
 [之风](https://github.com/zhi-feng2008)
