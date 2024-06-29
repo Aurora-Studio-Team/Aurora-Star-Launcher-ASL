@@ -12,25 +12,34 @@
     <Grid>
         <TabControl ui:TabControlHelper.IsAddTabButtonVisible="False" VerticalAlignment="Top" >
             <TabItem Header="外置登录">
-                <Grid>
-                    <StackPanel Margin="5,10,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
-                        <Label Content="验证服务器地址:" HorizontalAlignment="Left"/>
-                        <TextBox ui:ControlHelper.PlaceholderText="默认为LittleSkin" Width="225" x:Name="Login_Server" Text="" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                <Grid VerticalAlignment="Top" >
+                    <StackPanel VerticalAlignment="Center" Height="300">
+                        <TextBlock Text="此功能正在开发中，请耐心等待版本上线！ &#xA; Plaese wait sometimes,thank you!" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,110,0,0"/>
+                        <ui:HyperlinkButton FontSize="12" Content="详细信息" VerticalAlignment="Bottom" Margin="0,125,0,0" HorizontalAlignment="Center" Click="HyperlinkButton_Click"/>
                     </StackPanel>
-                    <StackPanel Margin="5,65,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
-                        <Label Content="用户邮箱：" HorizontalAlignment="Left"/>
-                        <TextBox Width="225" x:Name="User_Email" Text="" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
-                    </StackPanel>
-                    <StackPanel Margin="5,120,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
-                        <Label Content="验证服务器地址:" HorizontalAlignment="Left"/>
-                        <PasswordBox Width="225" x:Name="User_Password" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
-                    </StackPanel>
-                    <Button x:Name="Start" FontSize="20" Background="BlueViolet" Height="80" Width="220" VerticalAlignment="Top" Margin="0,225,0,0" Click="Start_Click" HorizontalAlignment="Stretch">
-                        <StackPanel>
-                            <TextBlock Text="启动游戏" HorizontalAlignment="Center"/>
-                            <TextBlock Text="请选择游戏版本" FontSize="11" HorizontalAlignment="Center" />
-                        </StackPanel>
-                    </Button>
+
+                    <Viewbox Height="0" Width="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Grid>
+                            <StackPanel Margin="5,10,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                                <Label Content="验证服务器地址:" HorizontalAlignment="Left"/>
+                                <TextBox ui:ControlHelper.PlaceholderText="默认为LittleSkin" Width="225" x:Name="Login_Server" Text="" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Margin="5,65,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                                <Label Content="用户邮箱：" HorizontalAlignment="Left"/>
+                                <TextBox Width="225" x:Name="User_Email" Text="" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Margin="5,120,5,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                                <Label Content="验证服务器地址:" HorizontalAlignment="Left"/>
+                                <PasswordBox Width="225" x:Name="User_Password" FontSize="15" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                            </StackPanel>
+                            <Button x:Name="Start" FontSize="20" Background="BlueViolet" Height="80" Width="220" VerticalAlignment="Top" Margin="0,225,0,0" Click="Start_Click" HorizontalAlignment="Stretch">
+                                <StackPanel>
+                                    <TextBlock Text="启动游戏" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="请选择游戏版本" FontSize="11" HorizontalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </Grid>
+                    </Viewbox>
                 </Grid>
             </TabItem>
             <TabItem Header="统一通行证">

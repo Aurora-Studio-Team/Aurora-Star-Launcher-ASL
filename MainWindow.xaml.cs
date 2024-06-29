@@ -1,5 +1,4 @@
-﻿using iNKORE.UI.WPF.Modern.Controls;
-using System.Windows;
+﻿using System.Windows;
 using AuroraStarLauncher.Pages;
 using iNKORE.UI.WPF.Modern.Media.Animation;
 using iNKORE.UI.WPF.Modern;
@@ -14,13 +13,10 @@ namespace AuroraStarLauncher
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static iNKORE.UI.WPF.Modern.Controls.Frame main_frame { get; set; } = new iNKORE.UI.WPF.Modern.Controls.Frame();
-
         public MainWindow()
         {
             InitializeComponent();
 
-            main_frame = frame;
             NavView.Header = "启动";
 
             //默认主题
@@ -87,6 +83,11 @@ namespace AuroraStarLauncher
                 {
                     frame.Content = new HomePage();
                     NavView.Header = "启动";
+                }
+                if (navPageType == typeof(VersionsManagerPage))
+                {
+                    frame.Content = new VersionsManagerPage();
+                    NavView.Header = "版本管理";
                 }
                 if (navPageType == typeof(VersionsManagerPage))
                 {

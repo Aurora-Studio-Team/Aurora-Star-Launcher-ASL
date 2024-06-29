@@ -7,6 +7,7 @@ using Page = System.Windows.Controls.Page;
 using StarLight_Core.Models.Authentication;
 using System.Linq;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace AuroraStarLauncher.Pages.LoginPages
 {
@@ -131,6 +132,11 @@ namespace AuroraStarLauncher.Pages.LoginPages
         private void Versions_Manager_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.main_frame.Content = new VersionsManagerPage();
+        }
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe", "https://asl.thzstudent.top/Updata/New/");
         }
     }
 }
