@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace AuroraStarLauncher.Pages
 {
     /// <summary>
-    /// AccountMangerPage.xaml 的交互逻辑
+    /// TestPage.xaml 的交互逻辑
     /// </summary>
-    public partial class AccountManagerPage : Page
+    public partial class TestPage : Page
     {
-        public AccountManagerPage()
+        public TestPage()
         {
             InitializeComponent();
         }

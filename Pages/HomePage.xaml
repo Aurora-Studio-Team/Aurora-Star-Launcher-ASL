@@ -11,28 +11,19 @@
       d:DesignHeight="440" d:DesignWidth="790"
       Title="HomePage">
     <Grid>
-        <StackPanel HorizontalAlignment="Right" Margin="10,10,10,10">
-            <ComboBox Width="240" Margin="10,10,10,10" x:Name="Use_Login" SelectionChanged="Use_Login_SelectionChanged">
-                <ComboBoxItem Tag="Microsoft" IsSelected="True">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                        <iconPacks:PackIconBootstrapIcons Kind="ShieldCheck" />
-                        <TextBlock Text=" 微软登录"/>
-                    </StackPanel>
-                </ComboBoxItem>
-                <ComboBoxItem Tag="Offine">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                        <iconPacks:PackIconMaterial Kind="LinkVariantOff" />
-                        <TextBlock Text=" 离线登录"/>
-                    </StackPanel>
-                </ComboBoxItem>
-                <ComboBoxItem Tag="Other">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                        <iconPacks:PackIconZondicons Kind="Servers" />
-                        <TextBlock Text=" 第三方登录"/>
-                    </StackPanel>
-                </ComboBoxItem>
-            </ComboBox>
-            <ui:Frame x:Name="Login_Pages"/>
-        </StackPanel>
+        <Button 
+             HorizontalAlignment="Right" 
+             VerticalAlignment="Bottom"
+             Margin="0,0,20,20"
+            Background="Transparent" Click="Button_Click"
+            >
+            <StackPanel Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <TextBlock FontSize="20" Text="请选择版本" HorizontalAlignment="Right" x:Name="Show_Game_Ver"/>
+                    <TextBlock FontSize="10" Text="启动游戏" HorizontalAlignment="Right"/>
+                </StackPanel>
+                <TextBlock FontSize="30" Text=">"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>

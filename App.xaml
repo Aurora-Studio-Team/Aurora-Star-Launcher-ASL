@@ -10,11 +10,24 @@
                 <ui:ThemeResources/>
                 <ui:XamlControlsResources />
             </ResourceDictionary.MergedDictionaries>
+            <FontFamily x:Key="Quicksand">
+                ./Fonts/#Quicksand
+            </FontFamily>
             <Style x:Key="Style_ContentBorder" TargetType="Border">
                 <Setter Property="BorderBrush" Value="{DynamicResource {x:Static ui:ThemeKeys.CardStrokeColorDefaultBrushKey}}"/>
                 <Setter Property="Background" Value="{DynamicResource {x:Static ui:ThemeKeys.LayerFillColorDefaultBrushKey}}"/>
                 <Setter Property="BorderThickness" Value="1"/>
                 <Setter Property="CornerRadius" Value="8"/>
+            </Style>
+            <Style TargetType="Expander" BasedOn="{StaticResource {x:Static ui:ThemeKeys.ExpanderCardStyleKey}}">
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            </Style>
+            <Style x:Key="SettingsCard" TargetType="Border">
+                <Setter Property="Background" Value="{DynamicResource {x:Static ui:ThemeKeys.ExpanderHeaderBackgroundKey}}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource {x:Static ui:ThemeKeys.ExpanderHeaderBorderBrushKey}}"/>
+                <Setter Property="BorderThickness" Value="{DynamicResource {x:Static ui:ThemeKeys.ExpanderHeaderBorderThicknessKey}}"/>
+                <Setter Property="CornerRadius" Value="4"/>
+                <Setter Property="Padding" Value="15,0,20,0"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

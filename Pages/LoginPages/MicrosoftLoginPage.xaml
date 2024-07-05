@@ -7,20 +7,11 @@
       xmlns:hc="https://handyorg.github.io/handycontrol"
       xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
       mc:Ignorable="d" 
-      d:DesignHeight="380" d:DesignWidth="300"
+      d:DesignHeight="175" d:DesignWidth="175"
       Title="MicrosoftLoginPage">
     <Grid>
-        <Image x:Name="User_Image" Height="150" Width="150" VerticalAlignment="Top" Margin="0,20,0,0"/>
-        <TextBlock x:Name="User_Name" Text="请登录" FontSize="22" VerticalAlignment="Top" Margin="0,180,0,0" HorizontalAlignment="Center"/>
-        <Button x:Name="Login" Content="登录到你的Microsoft账户" FontSize="15" Height="35" Width="220" VerticalAlignment="Top" Margin="0,220,0,0" Click="Login_Click" HorizontalAlignment="Stretch"/>
-        <Button x:Name="Start" FontSize="20" Background="BlueViolet" Height="80" Width="220" VerticalAlignment="Top" Margin="0,260,0,0" Click="Start_Click" HorizontalAlignment="Stretch">
-            <StackPanel>
-                <TextBlock Text="启动游戏" HorizontalAlignment="Center"/>
-                <TextBlock Text="请选择游戏版本" FontSize="11" HorizontalAlignment="Center" />
-            </StackPanel>
-        </Button>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,345,0,0">
-            <Button Content="版本选择" Height="30" Width="220" HorizontalAlignment="Stretch" Click="Button_Click"/>
-        </StackPanel>
+        <TextBlock x:Name="User_Name" Text="你未登录" FontSize="22" VerticalAlignment="Center" Margin="0,-50,0,0" HorizontalAlignment="Center"/>
+        <Button x:Name="Login" Content="登录账户" FontSize="15" Height="35" Click="Login_Click" Margin="0,0,0,30" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+        <ui:HyperlinkButton Content="如何登录?" FontSize="12" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="HyperlinkButton_Click"/>
     </Grid>
 </Page>

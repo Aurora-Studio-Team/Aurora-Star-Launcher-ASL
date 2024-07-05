@@ -5,6 +5,9 @@ using iNKORE.UI.WPF.Modern;
 using System.IO;
 using System.Reflection;
 using System.Windows.Controls;
+using iNKORE.UI.WPF.Modern.Controls.Helpers;
+using iNKORE.UI.WPF.Modern.Controls;
+using Page = System.Windows.Controls.Page;
 
 namespace AuroraStarLauncher
 {
@@ -13,17 +16,26 @@ namespace AuroraStarLauncher
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Page Home = new HomePage();
+        private Page VersionsManager = new VersionsManagerPage();
+        private Page AccountManager = new AccountManagerPage();
+        private Page Download = new DownloadPage();
+        private Page Links = new LinksPage();
+        private Page Helps = new HelpsPage();
+        private Page Settings = new SettingsPage();
+        private Page About = new AboutPage();
+        private Page Test = new TestPage();
         public MainWindow()
         {
             InitializeComponent();
 
-            NavView.Header = "启动";
+            NavView.Header = "首页";
 
             //默认主题
             ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light;
 
             //默认页面
-            frame.Content = new HomePage();
+            CurrentPage.Content = new HomePage();
             try
             {
                 //生成ASL文件夹
@@ -62,64 +74,69 @@ namespace AuroraStarLauncher
 
         }
         //导航栏
-        private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        private void NavigationTriggered(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
             if (args.IsSettingsInvoked == true)
             {
-                NavigationView_Navigate(typeof(int), args.RecommendedNavigationTransitionInfo);
+                NavigateTo(typeof(int), args.RecommendedNavigationTransitionInfo);
             }
             else if (args.InvokedItemContainer != null)
             {
-                NavigationView_Navigate(Type.GetType(args.InvokedItemContainer.Tag.ToString()), args.RecommendedNavigationTransitionInfo);
+                NavigateTo(Type.GetType(args.InvokedItemContainer.Tag.ToString()), args.RecommendedNavigationTransitionInfo);
             }
         }
 
-        private void NavigationView_Navigate(Type navPageType, NavigationTransitionInfo transitionInfo)
+        private void NavigateTo(Type navPageType, NavigationTransitionInfo transitionInfo)
         {
-            Type preNavPageType = frame.Content.GetType();
+            Type preNavPageType = CurrentPage.Content.GetType();
             if (navPageType is not null && !Equals(navPageType, preNavPageType))
             {
                 if (navPageType == typeof(HomePage))
                 {
-                    frame.Content = new HomePage();
-                    NavView.Header = "启动";
+                    CurrentPage.Navigate(Home);
+                    NavView.Header = "首页";
+                }
+                if (navPageType == typeof(AccountManagerPage))
+                {
+                    CurrentPage.Navigate(AccountManager);
+                    NavView.Header = "账户管理";
                 }
                 if (navPageType == typeof(VersionsManagerPage))
                 {
-                    frame.Content = new VersionsManagerPage();
-                    NavView.Header = "版本管理";
-                }
-                if (navPageType == typeof(VersionsManagerPage))
-                {
-                    frame.Content = new VersionsManagerPage();
+                    CurrentPage.Navigate(VersionsManager);
                     NavView.Header = "版本管理";
                 }
                 if (navPageType == typeof(DownloadPage))
                 {
-                    frame.Content = new DownloadPage();
+                    CurrentPage.Navigate(Download);
                     NavView.Header = "下载";
                 }
                 if (navPageType == typeof(LinksPage))
                 {
-                    frame.Content = new LinksPage();
+                    CurrentPage.Navigate(Links);
                     NavView.Header = "联机";
                 }
                 if (navPageType == typeof(HelpsPage))
                 {
-                    frame.Content = new HelpsPage();
+                    CurrentPage.Navigate(Helps);
                     NavView.Header = "帮助";
                 }
                 if (navPageType == typeof(SettingsPage))
                 {
-                    frame.Content = new SettingsPage();
+                    CurrentPage.Navigate(Settings);
                     NavView.Header = "设置";
                 }
                 if (navPageType == typeof(AboutPage))
                 {
-                    frame.Content = new AboutPage();
+                    CurrentPage.Navigate(About);
                     NavView.Header = "关于";
                 }
-            }       
+                if (navPageType == typeof(TestPage))
+                {
+                    CurrentPage.Navigate(Test);
+                    NavView.Header = "调试";
+                }
+            }
         }
     }
 }

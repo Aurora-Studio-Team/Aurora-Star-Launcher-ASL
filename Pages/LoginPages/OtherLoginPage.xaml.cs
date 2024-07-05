@@ -131,7 +131,7 @@ namespace AuroraStarLauncher.Pages.LoginPages
 
         private void Versions_Manager_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.main_frame.Content = new VersionsManagerPage();
+            
         }
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)

@@ -69,7 +69,7 @@ namespace AuroraStarLauncher.Pages.LoginPages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.main_frame.Content = new VersionsManagerPage();
+            
         }
     }
 }

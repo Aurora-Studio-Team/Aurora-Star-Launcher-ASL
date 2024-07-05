@@ -1,14 +1,55 @@
-﻿<Page x:Class="AuroraStarLauncher.Pages.AccountMangerPage"
+﻿<Page x:Class="AuroraStarLauncher.Pages.AccountManagerPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
+      xmlns:iconPacks = "http://metro.mahapps.com/winfx/xaml/iconpacks"
       xmlns:local="clr-namespace:AuroraStarLauncher.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AccountMangerPage">
-
     <Grid>
-        
+        <TextBlock 
+            Text="选择您登录游戏的账户：" 
+            FontSize="15"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="15,10,0,0"
+        />
+        <!--
+        <Button 
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="0,0,15,0"
+                FontSize="12"
+                Height="35"
+                >
+            <StackPanel Orientation="Horizontal">
+                <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Add}" FontSize="16"/>
+                <TextBlock Text="添加账户"/>
+            </StackPanel>
+        </Button>
+        -->
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,50,0,0" Orientation="Horizontal">
+            <Border Style="{StaticResource Style_ContentBorder}" Height="250" Width="200">
+                <Grid>
+                    <StackPanel>
+                        <TextBlock
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10,10,0,0"
+                            >
+                            <StackPanel Orientation="Horizontal">
+                                <iconPacks:PackIconBootstrapIcons Kind="ShieldCheck"/>
+                                <TextBlock Text="Microsoft账户"/>
+                            </StackPanel>
+                        </TextBlock>
+                    </StackPanel>
+                    <ui:Frame VerticalAlignment="Top" x:Name="MicrosoftLogin_Switch" Margin="0,35,0,0" Height="175" Width="175"/>
+                    <RibbonButton Content="Microsoft"  />
+                </Grid>
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>

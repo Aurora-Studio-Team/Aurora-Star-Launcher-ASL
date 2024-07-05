@@ -6,69 +6,94 @@
         xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
         xmlns:iconPacks = "http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:AuroraStarLauncher"
-        ui:ThemeManager.IsThemeAware="True"
-        ui:TitleBar.ExtendViewIntoTitleBar="False"    
-        ui:WindowHelper.SystemBackdropType="Mica"
-        ui:TitleBar.IsBackButtonVisible="False"
-        ui:WindowHelper.UseModernWindowStyle="True"
-        WindowStartupLocation="CenterScreen" 
+        WindowStartupLocation="CenterScreen"
         UseLayoutRounding="True"
-        mc:Ignorable="d"
+        ui:ThemeManager.IsThemeAware="True"
+        ui:WindowHelper.SystemBackdropType="Mica"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        Title="Aurora Star Launcher"
+        ui:TitleBar.ExtendViewIntoTitleBar="True"
         ui:TitleBar.IsIconVisible="True"
-        Title="Aurora Star Launcher" 
-        Height="575" 
-        Width="925">
+        ui:TitleBar.Height="40"
+        ui:TitleBar.IsBackEnabled="False"
+        ui:TitleBar.IsBackButtonVisible="False"
+        MinHeight="600"
+        MinWidth="330"
+        Height="600" 
+        Width="900">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="10,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Margin="5,-10,0,-10" Grid.Column="0" RenderOptions.BitmapScalingMode="HighQuality" Source="asl.ico" Width="20" Height="20"/>
+            <Grid Grid.Column="1" Margin="10,0,0,0" Grid.Row="0" Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontFamily="{StaticResource Quicksand}" Margin="5,17,0,0" FontWeight="Medium"  Grid.Column="0" Text="Aurora Star Launcher"/>
+                <TextBlock FontFamily="{StaticResource Quicksand}" Margin="5,17,0,0" FontWeight="SemiBold" Grid.Column="1" Text="v1.0.0" Foreground="BlueViolet" HorizontalAlignment="Left"/>
+            </Grid>
+        </Grid>
         <!-- 导航 -->
         <ui:NavigationView x:Name="NavView" 
-                           IsPaneOpen="False" 
+                           IsPaneOpen="False"
+                           ItemInvoked="NavigationTriggered"
                            IsBackButtonVisible="Collapsed"
-                           ItemInvoked="NavigationView_ItemInvoked">
+                           PaneDisplayMode="Auto"
+                           Grid.Row="1"
+                           >
             <ui:NavigationView.MenuItems>
-                <ui:NavigationViewItem Content="启动" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.HomePage" IsSelected="True">
+                <ui:NavigationViewItem Content="主页" Tag="AuroraStarLauncher.Pages.HomePage" IsSelected="True">
                     <ui:NavigationViewItem.Icon>
-                        <iconPacks:PackIconMaterialLight Kind="Power" />
+                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Home}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
-                <ui:NavigationViewItem Content="版本管理" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.VersionsManagerPage" IsSelected="True">
+                <ui:NavigationViewItem Content="版本管理" Tag="AuroraStarLauncher.Pages.VersionsManagerPage" IsSelected="True">
                     <ui:NavigationViewItem.Icon>
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Manage}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
-                <ui:NavigationViewItem Content="账户管理" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.AccountManagerPage" IsSelected="True">
+                <ui:NavigationViewItem Content="账户管理" Tag="AuroraStarLauncher.Pages.AccountManagerPage">
                     <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.SwitchUser}" FontSize="16"/>
+                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.AddFriend}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
-                <ui:NavigationViewItem Content="下载" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.DownloadPage">
+                <ui:NavigationViewItem Content="下载" Tag="MCServerLauncher.UI.View.ResDownloadPage">
                     <ui:NavigationViewItem.Icon>
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Download}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
-                <ui:NavigationViewItem Content="联机" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.LinksPage">
-                    <ui:NavigationViewItem.Icon>
-                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Link}" FontSize="16"/>
-                    </ui:NavigationViewItem.Icon>
-                </ui:NavigationViewItem>
             </ui:NavigationView.MenuItems>
             <ui:NavigationView.FooterMenuItems>
-                <ui:NavigationViewItem Content="帮助" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.HelpsPage">
+                <ui:NavigationViewItem Content="帮助" Tag="MCServerLauncher.UI.View.HelpPage">
                     <ui:NavigationViewItem.Icon>
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Help}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
-                <ui:NavigationViewItem Content="设置" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.SettingsPage">
+                <ui:NavigationViewItem Content="设置" Tag="AuroraStarLauncher.Pages.SettingsPage">
                     <ui:NavigationViewItem.Icon>
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Settings}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
-                <ui:NavigationViewItem Content="关于" HorizontalAlignment="Left" Tag="AuroraStarLauncher.Pages.AboutPage">
+                <ui:NavigationViewItem Content="关于" Tag="AuroraStarLauncher.Pages.AboutPage">
                     <ui:NavigationViewItem.Icon>
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Info}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="调试" Tag="AuroraStarLauncher.Pages.TestPage">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.DeveloperTools}" FontSize="16"/>
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
             </ui:NavigationView.FooterMenuItems>
-            <ui:Frame x:Name="frame" Margin="50,0,10,0"/>
+            <ui:Frame Margin="25,0,0,0" x:Name="CurrentPage"/>
         </ui:NavigationView>
     </Grid>
 </Window>
