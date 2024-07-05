@@ -24,27 +24,23 @@
                 </StackPanel>
             </Grid>
         </Border>
-        <Border Style="{StaticResource Style_ContentBorder}" Margin="15,120,15,65" VerticalAlignment="Top">
-            <Grid>
-                <Expander Header="Minecraft" Margin="10,5,10,5" VerticalAlignment="Center">
-                    <ListBox x:Name="Minecraft_List">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <StackPanel Orientation="Vertical">
-                                        <TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="14"/>
-                                        <TextBlock>
+        <Expander Header="Minecraft" Margin="15,120,15,65" VerticalAlignment="Top">
+            <ListBox x:Name="Minecraft_List">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="14"/>
+                                <TextBlock>
                                                    <Run Text="发布时间："/>
                                                    <Run Text="{Binding ReleaseTime}"/>
-                                        </TextBlock>
-                                    </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </Expander>
-            </Grid>
-        </Border>
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Expander>
         <Button Content="刷新" Height="45" VerticalAlignment="Bottom" x:Name="GetVersionsList" HorizontalAlignment="Right" Margin="0,0,120,10" Click="GetVersionsList_Click"/>
         <Button Content="安装此版本" Background="BlueViolet" Height="45" VerticalAlignment="Bottom" x:Name="Install" HorizontalAlignment="Right" Margin="0,0,15,10" Click="Install_Click"/>
         <ProgressBar x:Name="jdt" Margin="0,0,180,20" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>

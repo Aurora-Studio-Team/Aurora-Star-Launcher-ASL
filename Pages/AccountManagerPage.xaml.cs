@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AuroraStarLauncher.Pages.LoginPages;
 
 namespace AuroraStarLauncher.Pages
 {
@@ -23,6 +24,8 @@ namespace AuroraStarLauncher.Pages
         public AccountManagerPage()
         {
             InitializeComponent();
+
+            MicrosoftLogin_Switch.Content = new MicrosoftLoginPage();
         }
     }
 }

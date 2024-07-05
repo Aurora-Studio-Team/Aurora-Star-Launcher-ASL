@@ -29,6 +29,13 @@
                 <Setter Property="CornerRadius" Value="4"/>
                 <Setter Property="Padding" Value="15,0,20,0"/>
             </Style>
+            <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Static ui:ThemeKeys.DefaultComboBoxStyleKey}}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            </Style>
+            <Style TargetType="ui:ToggleSwitch">
+                <Setter Property="MinWidth" Value="0"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

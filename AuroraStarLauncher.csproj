@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <Resource Include="asl.ico" />
-    <EmbeddedResource Include="Fonts\Quicksand.ttf" />
+    <Resource Include="Fonts\Quicksand.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,7 +40,7 @@
     <PackageReference Include="iNKORE.UI.WPF.Modern" Version="0.9.29" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="5.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="StarLight_Core" Version="1.3.4-Preview8" />
+    <PackageReference Include="StarLight_Core" Version="1.3.5-Preview1" />
   </ItemGroup>
 
   <ItemGroup>

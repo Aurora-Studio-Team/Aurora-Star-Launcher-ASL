@@ -47,10 +47,7 @@ namespace AuroraStarLauncher.Pages
         {
             try
             {
-                string id = (sender as ListBox).SelectedItem.ToString();
-                MessageBox.Show(id);
-                MinecraftInstaller installer = new MinecraftInstaller(id);
-                await installer.InstallAsync(id, true);
+                
 
                 Footer_Tip.Severity = InfoBarSeverity.Success;
                 Footer_Tip.Title = "版本安装成功！";

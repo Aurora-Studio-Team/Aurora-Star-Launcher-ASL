@@ -14,12 +14,11 @@
         Title="Aurora Star Launcher"
         ui:TitleBar.ExtendViewIntoTitleBar="True"
         ui:TitleBar.IsIconVisible="True"
-        ui:TitleBar.Height="40"
         ui:TitleBar.IsBackEnabled="False"
         ui:TitleBar.IsBackButtonVisible="False"
         MinHeight="600"
         MinWidth="330"
-        Height="600" 
+        Height="500" 
         Width="900">
     <Grid>
         <Grid.RowDefinitions>
@@ -65,14 +64,14 @@
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.AddFriend}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
-                <ui:NavigationViewItem Content="下载" Tag="MCServerLauncher.UI.View.ResDownloadPage">
+                <ui:NavigationViewItem Content="下载" Tag="AuroraStarLauncher.Pages.DownloadPage">
                     <ui:NavigationViewItem.Icon>
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Download}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
             </ui:NavigationView.MenuItems>
             <ui:NavigationView.FooterMenuItems>
-                <ui:NavigationViewItem Content="帮助" Tag="MCServerLauncher.UI.View.HelpPage">
+                <ui:NavigationViewItem Content="帮助" Tag="AuroraStarLauncher.Pages.HelpsPage">
                     <ui:NavigationViewItem.Icon>
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Help}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
@@ -93,7 +92,7 @@
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
             </ui:NavigationView.FooterMenuItems>
-            <ui:Frame Margin="25,0,0,0" x:Name="CurrentPage"/>
+            <ui:Frame Margin="40,0,0,0" x:Name="CurrentPage"/>
         </ui:NavigationView>
     </Grid>
 </Window>

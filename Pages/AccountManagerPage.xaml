@@ -47,7 +47,7 @@
                         </TextBlock>
                     </StackPanel>
                     <ui:Frame VerticalAlignment="Top" x:Name="MicrosoftLogin_Switch" Margin="0,35,0,0" Height="175" Width="175"/>
-                    <RibbonButton Content="Microsoft"  />
+                    <CheckBox Content="Microsoft" IsChecked="True" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10"/>
                 </Grid>
             </Border>
         </StackPanel>

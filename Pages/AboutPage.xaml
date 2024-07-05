@@ -11,31 +11,9 @@
       Title="AboutPage">
     <FrameworkElement.Resources>
         <ResourceDictionary>
-
-            <Style TargetType="Expander" BasedOn="{StaticResource {x:Static ui:ThemeKeys.ExpanderCardStyleKey}}">
-                <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            </Style>
-            <Style x:Key="Style_SectionBorderStyle" TargetType="Border">
-                <Setter Property="Background" Value="{DynamicResource {x:Static ui:ThemeKeys.ExpanderHeaderBackgroundKey}}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource {x:Static ui:ThemeKeys.ExpanderHeaderBorderBrushKey}}"/>
-                <Setter Property="BorderThickness" Value="{DynamicResource {x:Static ui:ThemeKeys.ExpanderHeaderBorderThicknessKey}}"/>
-                <Setter Property="CornerRadius" Value="4"/>
-                <Setter Property="Padding" Value="15,0,20,0"/>
-            </Style>
-
-            <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Static ui:ThemeKeys.DefaultComboBoxStyleKey}}">
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            </Style>
-
             <Style TargetType="ui:FontIcon">
                 <Setter Property="FontSize" Value="20"/>
             </Style>
-
-            <Style TargetType="ui:ToggleSwitch">
-                <Setter Property="MinWidth" Value="0"/>
-            </Style>
-
         </ResourceDictionary>
     </FrameworkElement.Resources>
     <ScrollViewer>
@@ -53,7 +31,7 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition Width="200"/>
                             </Grid.ColumnDefinitions>
-                            <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Accept}" Grid.RowSpan="2" Margin="5,15,20,15"/>
+                            <iconPacks:PackIconForkAwesome Kind="Copyright" Grid.RowSpan="2" Margin="5,15,20,15"/>
                             <TextBlock Text="法律与版权" Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,2"/>
                             <TextBlock Text="展示软件使用的包的版权信息" Grid.Column="1" VerticalAlignment="Top" Grid.Row="1" Margin="0,2,20,5" Opacity="0.615" FontSize="12" TextTrimming="CharacterEllipsis" TextWrapping="WrapWithOverflow"/>
                         </Grid>
