@@ -1,0 +1,20 @@
+﻿<Window x:Class="AuroraStarLauncher.Windows.FrpConfigWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
+        xmlns:iconPacks = "http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:AuroraStarLauncher.Windows"
+        mc:Ignorable="d"
+        Title="FrpConfigWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl Margin="0,0,0,0" Style="{StaticResource {x:Static ui:ThemeKeys.TabControlPivotStyleKey}}" VerticalAlignment="Top">
+            <TabItem Header="北极光网络（PN）">
+                <Grid>
+                    <ui:Frame x:Name="PN_Frp" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

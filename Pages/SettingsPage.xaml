@@ -184,6 +184,12 @@
                             <TextBlock Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="帮助文档" FontSize="14"/>
                         </StackPanel>
                     </ui:HyperlinkButton>
+                    <ui:HyperlinkButton HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconRemixIcon HorizontalAlignment="Left" VerticalAlignment="Center" Height="18" Width="18" Kind="ShareForwardBoxLine" />
+                            <TextBlock Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Bug反馈" FontSize="14"/>
+                        </StackPanel>
+                    </ui:HyperlinkButton>
                 </StackPanel>
             </StackPanel>
             <ui:InfoBar x:Name="Footer_Tip" IsOpen="False" Margin="15,0,15,15" VerticalAlignment="Bottom"/>

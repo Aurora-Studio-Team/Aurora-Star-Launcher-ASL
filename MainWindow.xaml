@@ -69,6 +69,11 @@
                         <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Download}" FontSize="16"/>
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="联机" Tag="AuroraStarLauncher.Pages.LinksPage">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Link}" FontSize="16"/>
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
             </ui:NavigationView.MenuItems>
             <ui:NavigationView.FooterMenuItems>
                 <ui:NavigationViewItem Content="帮助" Tag="AuroraStarLauncher.Pages.HelpsPage">
