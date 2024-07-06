@@ -23,7 +23,8 @@ namespace AuroraStarLauncher.Pages
             Game_Versions.ItemsSource = versions;//绑定数据源
             Game_Versions.DisplayMemberPath = "Id";//设置comboBox显示的为版本Id
             Game_Versions.SelectedIndex = 0;
-            Game_Versions_Manager_Settings_Name.Text = Game_Versions.SelectedValue.ToString();
+            Game_Versions_Manager_Settings_Name.Text = Game_Versions.SelectedValue != null ? Game_Versions.SelectedValue.ToString() : string.Empty;
+
         }
     }
 }
