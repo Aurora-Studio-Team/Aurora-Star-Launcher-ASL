@@ -9,7 +9,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LinksPage">
-
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,15,0,0">
             <TextBlock Text="您的穿透地址为：" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20"/>
