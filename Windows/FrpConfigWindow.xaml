@@ -10,7 +10,7 @@
         Title="FrpConfigWindow" Height="450" Width="800">
     <Grid>
         <TabControl Margin="0,0,0,0" Style="{StaticResource {x:Static ui:ThemeKeys.TabControlPivotStyleKey}}" VerticalAlignment="Top">
-            <TabItem Header="北极光网络（PN）">
+            <TabItem Header="极星网络（PN）">
                 <Grid>
                     <ui:Frame x:Name="PN_Frp" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                 </Grid>
