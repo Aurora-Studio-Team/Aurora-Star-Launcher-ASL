@@ -7,6 +7,7 @@ using StarLight_Core.Models.Launch;
 using StarLight_Core.Models.Authentication;
 using Page = System.Windows.Controls.Page;
 using StarLight_Core.Enum;
+using System.Windows.Controls;
 
 namespace AuroraStarLauncher.Pages.LoginPages
 {
@@ -28,8 +29,9 @@ namespace AuroraStarLauncher.Pages.LoginPages
             MessageBox.Show("Microsoft网页加载过慢，如无法访问，请使用加速器等网络（代理）工具！", "温馨提示");
             var auth = new MicrosoftAuthentication("e1e383f9-59d9-4aa2-bf5e-73fe83b15ba0");
             var deviceCodeInfo = await auth.RetrieveDeviceCodeInfo();
+            Clipboard.SetDataObject(deviceCodeInfo.UserCode);
             Process.Start("explorer.exe", deviceCodeInfo.VerificationUri);
-            MessageBox.Show("请在浏览器中输入您的用户验证代码：" + deviceCodeInfo.UserCode, "Microsoft验证");
+            MessageBox.Show("请在浏览器中输入您的用户验证代码：" + deviceCodeInfo.UserCode + " 默认情况下已复制", "Microsoft验证");
             var tokenInfo = await auth.GetTokenResponse(deviceCodeInfo);
             userInfo = await auth.MicrosoftAuthAsync(tokenInfo, x =>
             {
