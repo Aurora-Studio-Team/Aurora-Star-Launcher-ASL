@@ -97,7 +97,7 @@
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
             </ui:NavigationView.FooterMenuItems>
-            <ui:Frame Margin="40,0,0,0" x:Name="CurrentPage"/>
+            <ui:Frame Margin="45,0,0,0" x:Name="CurrentPage"/>
         </ui:NavigationView>
     </Grid>
 </Window>
